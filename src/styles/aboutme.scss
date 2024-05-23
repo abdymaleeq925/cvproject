@@ -1,0 +1,629 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --textblue: #242F65;
+    --textgray: #525665;
+    --textblackish: #2F2F2F;
+}
+
+@mixin text($font-family: Fraunces, $font-size: 18px, $font-weight: 600, $line-height: 110%, $color: var(--textblue)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin wrapper($display: flex, $justify: space-between, $align: center, $gap: 10px) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin block($mt: 120px) {
+    margin-top: $mt;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+img { max-width: 100%; }
+
+.container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.container-xl {
+    width: 100%;
+    max-width: 1407px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header {
+    &__wrapper {
+        @include wrapper ($gap: 0);
+        margin-top: 20px;
+    }
+    &__navbar {
+        display: flex;
+        gap: 50px;
+        .navbar-text {
+            @include text($font-family: Mulish, $font-size: 20px, $line-height: 25.1px, $color: var(--textblackish));
+        }
+    }
+    &__logo {
+        display: flex;
+        gap: 10px;
+        .logo-text {
+            margin: 0;
+            @include text($font-family: Mulish, $font-size: 37px, $font-weight: 800, $line-height: 40.7px, $color: var(--textblue));
+        }
+    }
+    &__cta {
+        display: none;
+        .burger-menu {
+            display: flex;
+            border: 2px solid #242F65;
+            border-radius: 20px;
+            padding: 10px;
+            position: fixed;
+            z-index: 2;
+            background-color: #fff;
+            right: 5%;
+            top: -200%;
+            transition: all .2s ease;
+            &.show-menu {
+                top: 0;
+                right: 5%;
+            }
+            .links {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+                li {
+                    padding: 10px;
+                    text-align: center;
+                }
+                a {
+                    font-family: Fraunces;
+                    color: #242F65;
+                    text-decoration: none;  
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    @include block ($mt: 59px);
+    background: url('../img/banner_background.png') no-repeat center;
+    background-size: 90% 100%;
+    &__wrapper {
+        @include wrapper($justify: unset, $gap: 48px);
+        padding: 150px 260px;
+    }
+    &-image {
+        width: 100%;
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+    }
+    &-text {
+        .h2 {
+            @include text($font-size: 50px);
+        }
+        .text {
+            @include text($font-size: 25px, $font-weight: 400, $line-height: 126% );
+        }
+    }
+    &-btns {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        a {
+            @include text($font-size: 20px, $font-weight: 350 );
+        }
+        .black {
+            color: #fff;
+            background-color: #2A2C32;
+            border-radius: 10px;
+            padding: 18px 25px;
+        }
+    }
+}
+
+.eduwork {
+    @include block;
+    .education {
+        display: flex;
+        gap: 263px;
+        h2 {
+            @include wrapper;
+            width: 200px;
+            margin-top: 0;
+            @include text($font-size: 30px);
+        }
+    }
+    .list {
+        padding: 0;
+        margin: 0;
+        .info {
+            display: flex;
+            align-items: baseline;
+            gap: 22px;
+            margin-bottom: 60px;
+            &:not(:last-child){
+                .edu {
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 25px;
+                        left: -30px;
+                        width: 1px;
+                        height: 132%;
+                        background-color: #cccccc;
+                    }
+                }
+            }
+        }
+        .edu {
+            width: calc(100% - (150px + 15px + 44px));
+        }
+        .edu-period {
+            width: 150px;
+            @include text($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textgray))
+        }
+        .circle {
+            height: 15px;
+            width: 15px;
+            background-color: #7390F9;
+            border-radius: 100%;
+            position: relative;
+            
+        }
+        .edu-title {
+            margin: 0;
+            @include text($font-size: 25px, $line-height:128.5%);
+        }
+        .edu-degree {
+            margin: 12px 0;
+            @include text($font-family: Mulish, $font-size: 20px, $line-height:128.5%, $color: #7390F9);
+        }
+        .edu-info {
+            margin: 0;
+            @include text($font-family: Mulish, $font-size: 20px, $font-weight:300, $line-height:128.5%, $color: var(--textgray));
+            font-style: italic;
+        }
+    }
+    .featledge {
+        @include block($mt: 90px);
+        background-color: #F5F5F5;
+        border-radius: 20px;
+        padding: 73px 58px;
+        display: flex;
+        justify-content: space-between;
+        .feature, .knowledge {
+            .title {
+                display: flex;
+                align-items: center;
+                margin-top: 0;
+                gap: 10px;
+                @include text($font-size: 20px);
+            }
+            ul {
+                list-style-image: url('../icons/bluetick.svg');
+                
+            }
+            li p {
+                @include text($font-family: Mulsih, $font-weight: 400, $line-height: 146%, $color: var(--textgray));
+                margin: 0;
+                padding: 10px 0;
+            }
+        }
+        .knowledge {
+            ul {
+                gap: 100px;
+                column-count: 2;
+            }
+            
+        }
+    }
+}
+
+.footer {
+    @include block;
+    position: relative;
+    height: 952px;
+    background: #F4EDF8;
+    overflow: hidden;
+    .circle-1, .circle-2, .circle-3, .line-1, .line-2 { position: absolute; z-index: 0; }
+    .circle-1 {
+        width: 585px;
+        height: 585px;
+        background-color: #D5D4FF;
+        border-radius: 100%;
+        filter: blur(200px);
+        top: 19%;
+        right: 20%;
+    }
+    .circle-2 {
+        width: 641px;
+        height: 563px;
+        background-color: #FFD2DD;
+        border-radius: 100%;
+        filter: blur(200px);
+        top: 14%;
+        left: 10%;
+    }
+    .circle-3 {
+        width: 112px;
+        height: 112px;
+        background-color: #FFD2E6;
+        border-radius: 100%;
+        top: 22%;
+        left: 26%;
+    }
+    .line-1 {
+        top: 14%;
+        right: 0%;
+    }
+    .line-2 {
+        width: 18%;
+        bottom: 27%;
+        left: 0%;
+    }
+    &__wrapper {
+        position: absolute;
+        z-index: 1; 
+        left: 1%;
+        
+    }
+    .container-xl {
+        padding: 0;
+    }
+    &-logo {
+        width: 100%;
+    }
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 55px;
+        padding-top: 108px;
+        padding-bottom: 92px;
+        border-bottom: solid 1px #D092BA;
+    }
+    &__text {
+        @include text($font-family: Mulish, $font-size: 50px, $color: var(--textblue));
+    }
+    &__bottom {
+        @include wrapper($justify: center, $gap: 223px);
+        padding: 90px 0;
+    }
+    .socials {
+        display: flex;
+        gap: 40px;
+    }
+    &__cta {
+        list-style: none;
+        li {
+            margin: 25px 0;
+            @include text($font-size: 25px, $line-height: 110%, $color: var(--textblue));
+        }
+    }
+    .email-cta {
+        padding: 35px;
+        background-color: #FFF;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 55px;
+    }
+    .text-cta {
+        @include text($font-size: 25px, $line-height: 110%, $color: var(--textblue));
+    }
+    .email-btn {
+        @include wrapper($justify: normal);
+        @include text($font-family: Mulish, $font-weight: 700, $color: #fff);
+        padding: 17px 28px;
+        border: none;
+        border-radius: 10px;
+        background-color: #242F65;
+    }
+}
+
+@media screen and (max-width: 1850px) {
+    .footer {
+        .footer__text { font-size: 44px; }
+        .footer__wrapper { left: 2%; }
+        .footer .line-2 { bottom: 30%; }
+    }
+    
+}
+
+@media screen and (max-width: 1750px) {
+    .banner {
+        &__wrapper { padding: 150px 200px; }
+        &-content { gap: 30px; }
+        &-text { .h2 { margin-top: 0; } .text { margin: 0; } }
+    }
+    
+    .footer {
+        .footer__wrapper { left: 1%; }
+        .line-1 { width: 25%; }
+        .line-2 { bottom: 30%; width: 13%; }
+        .footer__text { font-size: 40px; }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .banner {
+        &-text { 
+            .h2 { font-size: 44px; img { width: 40px; } }
+            .text { font-size: 23px; }
+        }
+    }
+    .footer{
+        .footer__wrapper { left: 2%; }
+        .footer__text { font-size: 34px; img { width: 45px; } }
+        .footer__bottom { gap: 180px; }
+        .footer .text-cta { font-size: 22px; }
+    }   
+}
+
+@media screen and (max-width: 1440px) {
+    .banner {
+        &__wrapper { padding: 90px 140px; }
+        &-text { 
+            .h2 { font-size: 40px; img { width: 35px; } }
+            .text { font-size: 20px; }
+        }
+    }
+    .eduwork {
+        .container { padding: 0 30px; }
+        .education { gap: 220px; }
+    }
+    .footer {
+        height: 890px;
+        .footer__wrapper { left: 3%; }
+        .footer__text { font-size: 29px; img { width: 36px; }}
+        .footer__bottom { gap: 100px; }
+        .text-cta { font-size: 18px; }
+        .email-cta { gap: 40px; }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .header {
+        &__logo {
+            .logo { width: 11%; }
+            .logo-text { font-size: 34px; }
+        }
+    }
+    .banner {
+        &__wrapper { padding: 50px 100px; }
+        &-text { 
+            .h2 { font-size: 35px; img { width: 30px; } }
+            .text { font-size: 18px; }
+        }
+        &-btns {
+            .btn { font-size: 16px; }
+        }
+    }
+    .eduwork {
+        .education { gap: 150px; }
+        .list .edu-period { width: 120px; }
+        .featledge {
+            gap: 25px;
+            .feature, .knowledge {
+                width: 50%;
+                li p { font-size: 16px; }
+            }
+            .knowledge { ul { gap: 20px; } }
+        }
+    }
+    .footer {
+        height: 740px;
+        .footer__wrapper { left: 0 }
+        .footer__top { padding-top: 90px; }
+        .getintouch-btn {
+            img { width: 80%; }
+        }
+        .footer__text { font-size: 25px; img { width: 30px; } }
+        .footer__bottom { padding: 45px; }
+        .footer__cta {
+            li { font-size: 20px; }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        &__logo {
+            .logo { width: 10%; }
+            .logo-text { font-size: 26px; }
+        }
+        &__navbar {
+            .navbar-text { font-size: 16px; }
+        }
+    }
+    .banner {
+        &__wrapper { padding: 50px 100px; }
+        &-text { 
+            .h2 { font-size: 26px; img { width: 23px; } }
+            .text { font-size: 13px; }
+        }
+        &-btns {
+            .btn { font-size: 12px; }
+            .black { padding: 12px 19px; }
+        }
+    }
+    .eduwork {
+        @include block($mt: 80px);
+        .education {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            .h2 {
+                font-size: 24px;
+                gap: 0;
+            }
+            img {
+                width: 32px;
+            }
+        }
+        .featledge {
+            margin-top: 0;
+            padding: 55px 40px;
+        }
+        .list .edu-period { font-size: 18px; }
+    }
+    .footer {
+        @include block($mt: 80px);
+        height: 580px;
+        .footer__top { padding: 60px 0; }
+        .footer__bottom { gap: 80px; }
+        .footer__text { font-size: 18px; }
+        .getintouch-btn { width: 15%; img { width: 100%; } }
+        .footer__cta { margin-top: 0; padding-left: 20px; li { font-size: 18px; } }
+        .socials { gap: 20px; }
+        .email-cta { gap: 20px; padding: 20px;}
+        .text-cta { margin: 0; }
+        .email-btn { width: 50%; padding: 10px 20px; font-size: 14px; }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        .logo-text { font-size: 18px; }
+        &__navbar {
+            gap: 30px;
+        .navbar-text { font-size: 14px; }
+        }
+    }
+    .banner {
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &-image { width: 200px; }
+        &-text { 
+            .h2 { font-size: 24px; img { width: 21px; } }
+            .text { font-size: 12px; }
+        }
+        &-btns {
+            .btn { font-size: 12px; }
+            .black { padding: 12px 19px; }
+        }
+    }
+    .eduwork {
+        .education { gap: 25px; }
+        .list {
+            .edu-period, .edu-degree, .edu-info { font-size: 16px; }
+            .edu-title { font-size: 20px; }
+        }
+        .featledge {
+            flex-wrap: wrap;
+            justify-content: center;
+            hr {display: none;}
+            .feature, .knowledge { width: 100%; }
+        }
+    }
+    .footer {
+        height: 450px;
+        .footer__top { padding: 40px 0; gap: 40px;}
+        .footer__text { font-size: 14px; img { width: 14px; } }
+        .footer__bottom { gap: 50px; padding: 30px;}
+        .footer__cta li{ font-size: 14px; }
+        .text-cta { font-size: 14px; text-align: center;}
+        .email-cta { flex-direction: column; }
+        .email-btn { width: 51%; padding: 10px; img { width: 15%; } }
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .header {
+        &__navbar { display: none; }
+        &__cta { display: block; } 
+    }
+    .footer {
+        height: 420px;
+        .footer__top { padding: 35px 0;}
+        .footer__text { padding: 0 17px; }
+        .footer__cta { padding-left: 0; margin: 0; li { margin-top: 0; margin-bottom: 20px; } }
+        .email-btn { width: 60%; }
+        .email-cta { gap: 15px; }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner {
+        &__wrapper { padding: 30px; gap: 30px; }
+        &-content { width: 85%; }
+        &-btns {
+            gap: 12px;
+        }
+    }
+    .eduwork {
+        @include block($mt: 50px);
+        .education h2 { font-size: 26px; gap: 0; }
+        .list {
+            .edu-period { font-size: 14px; width: 90px;}
+            .edu { width: calc(100% - 144px); }
+            .edu-title { font-size: 17px; }
+            .edu-degree, .edu-info { font-size: 14px; }
+            .info:not(:last-child) .edu::before {
+                top: 16px;
+                height: 125%;
+            } 
+        }
+        .featledge .knowledge ul {
+            padding-left: 20px;
+        }
+    }
+    .footer {
+        height: 500px;
+        .footer__top {
+            gap: 30px;
+        }
+        .footer__bottom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .email-btn { width: 44%; }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .banner {
+        &-btns {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+    }
+    .eduwork {
+        .list {
+            .edu-period {
+                font-size: 13px;
+                width: 47px;
+            }
+            .edu { width: calc(100% - 105px); }
+        }
+        .featledge .knowledge ul { padding-left: 40px; column-count: 1; }
+    }
+}

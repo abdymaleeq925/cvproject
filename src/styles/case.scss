@@ -1,0 +1,1057 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --textblue: #242F65;
+    --textgray: #525665;
+    --textblackish: #2F2F2F;
+}
+
+@mixin text($font-family: Fraunces, $font-size: 18px, $font-weight: 600, $line-height: 110%, $color: var(--textgray)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin wrapper($display: flex, $justify: space-between, $align: center, $gap: 10px) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin block($mt: 120px) {
+    margin-top: $mt;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+img { max-width: 100%; }
+
+.container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.container-xl {
+    width: 100%;
+    max-width: 1407px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header {
+    &__wrapper {
+        @include wrapper ($gap: 0);
+        margin-top: 20px;
+    }
+    &__navbar {
+        display: flex;
+        gap: 50px;
+        .navbar-text {
+            @include text($font-family: Mulish, $font-size: 20px, $line-height: 25.1px, $color: var(--textblackish));
+        }
+    }
+    &__logo {
+        display: flex;
+        gap: 10px;
+        .logo-text {
+            margin: 0;
+            @include text($font-family: Mulish, $font-size: 37px, $font-weight: 800, $line-height: 40.7px, $color: var(--textblue));
+        }
+    }
+    &__cta {
+        display: none;
+        .burger-menu {
+            display: flex;
+            border: 2px solid #242F65;
+            border-radius: 20px;
+            padding: 10px;
+            position: fixed;
+            z-index: 2;
+            background-color: #fff;
+            right: 5%;
+            top: -200%;
+            transition: all .2s ease;
+            &.show-menu {
+                top: 0;
+                right: 5%;
+            }
+            .links {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+                li {
+                    padding: 10px;
+                    text-align: center;
+                }
+                a {
+                    font-family: Fraunces;
+                    color: #242F65;
+                    text-decoration: none;  
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    @include block($mt: 56px);
+    &__top {
+        @include wrapper($justify: center, $gap: 33px);
+        background: url('../img/banner_background.png') no-repeat center;
+        padding: 93px 341px;
+        flex-wrap: wrap;
+        text-align: center;
+        .banner__btn {
+            @include text($font-family: Mulish, $font-weight: 700, $color: #2A2C32 );
+            border: none;
+            background-color: transparent;
+        }
+        .banner__text {
+            @include text($font-size: 100px, $color: var(--textblue));
+            margin: 0;
+        }
+    }
+    &__bottom {
+        @include block;
+        .container-xl {
+            position: relative;
+            background-color: #F5EFFF;
+            border-radius: 30px;
+            padding: 57px 89px 0 741px
+        }
+        .banner__image-2 {
+            position: absolute;
+            z-index: 1;
+            bottom: 0%;
+            left: 6%;
+        }
+    }
+    
+}
+
+.project {
+    @include block;
+    &__wrapper {
+        display: flex;
+        gap: 23px;
+    }
+    &__summary {
+        width: 50%;
+        .title { @include text ($font-size: 30px, $color: var(--textblue)); }
+        .text { @include text ($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height: 128.5%); }
+        .project__btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            .btn {
+                @include text ($font-family: Mulish, $font-weight: 500, $line-height: 148%, $color: #7390F9);
+                border-radius: 5px;
+                border-color: #7390F9;
+                background-color: transparent;
+                padding: 10px 25px;
+
+            }
+        }
+    }
+    &__details {
+        width: 50%;
+        .title { @include text ($font-size: 30px, $color: var(--textblue)); }
+        .content {
+            padding: 52px 58px;
+            background-color: #F5F5F5;
+            border-radius: 20px;
+        }
+        .h4 { @include text ($font-size: 20px, $color: var(--textblue)); margin: 0;}
+        .name { @include text($font-family: Mulish, $font-weight: 500, $line-height: 128.5%); margin: 5px 0 24px 0;}
+        .website { @include text ($font-family: Mulish, $font-weight: 700, $line-height: 128.5%, $color: #7390F9); text-decoration: underline; margin-top: 5px; margin-bottom: 24px;}
+    }
+}
+
+.team {
+    @include block;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        padding: 50px 63px;
+        border: solid #D3D3D3;
+        border-radius: 20px;
+        .title {
+            @include text($font-size: 30px, $color: var(--textblue));
+        }
+        .members {
+            text-align: center;
+            .member-img { border-radius: 100%; }
+            .name { @include text($font-size: 20px, $font-weight: 350, $color: var(--textblue)); margin: 11px 0 7px 0;}
+            .position { @include text($font-family: Mulish, $line-height: 128.5%); margin: 0;}
+        }
+    }
+}
+
+.problem {
+    @include block;
+    &__wrapper {
+        padding: 118px 92px;
+        background-color: #2A2C32;
+        border-radius: 20px;
+        display: flex;
+        gap: 55px;
+        align-items: end;
+        .problem-content { width: 65%; }
+        .problem-images {
+            width: 35%;
+            img{ width: 100%; }}
+        .title { @include text($font-size: 30px, $color: #fff); }
+        .btn {
+            padding: 22px 32px;
+            @include text($font-size: 20px, $font-weight:350, $color: #fff);
+            border: 1px solid #3E3F43;
+            border-radius: 10px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3E3F43;
+        }
+        .subtext { @include text($font-family: Mulish, $font-size: 22px, $font-weight: 700, $line-height: 128.5%, $color: #fff); }
+        .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 350, $line-height: 128.5%, $color: #fff); }
+    }
+}
+
+.solution {
+    @include block;
+    &__wrapper {
+        padding: 26px 93px;
+        background-color: #EFEFEF;
+        border-radius: 20px;
+        display: flex;
+        gap: 55px;
+        align-items: center;
+        .problem-content { width: 50%; }
+        .problem-images {
+            img{ width: 100%; }}
+        .title { @include text($font-size: 30px, $color: var(--textblue)); }
+        .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 350, $line-height: 128.5%); }
+    }
+}
+
+.research {
+    @include block;
+    &__heading {
+        .h2 { @include text($font-size: 30px, $color: var(--textblue)); margin: 0;}
+        .text { @include text($font-size: 25px, $font-weight: 350, $line-height:128.5%); width: 90%; }
+    }
+    &__insights {
+        display: flex;
+        margin-top: 47px;
+        justify-content: space-between;
+        gap: 42px;
+        .insight {
+            width: 100%;
+            padding: 40px 30px;
+            border: solid 1px #D8D8D8;
+            border-radius: 10px;
+            .h4 { @include text($font-size: 25px, $color: var(--textblue)); margin: 26px 0 14px 0; }
+            .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 350, $line-height: 128.5%); margin: 0;}
+        }
+    }
+}
+
+.storyboard {
+    @include block;
+    &__heading {
+        .h2 { @include text($font-size: 30px, $color: var(--textblue)); margin: 0;}
+        .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height:128.5%); width: 90%; margin: 0; margin-top: 14px;}
+    }
+    &__images {
+        display: flex;
+        margin-top: 50px;
+        justify-content: space-between;
+        gap: 42px;
+    }
+}
+
+.userflow {
+    @include block;
+    &__heading {
+        .h2 { @include text($font-size: 30px, $color: var(--textblue)); margin: 0;}
+        .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height:128.5%); margin: 0; margin-top: 14px;}
+    }
+    &__image {
+        @include block ($mt: 124px);
+    }
+}
+
+.ux-research {
+    @include block;
+    &__heading {
+        .h2 { @include text($font-size: 30px, $color: var(--textblue)); margin: 0;}
+        .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height:128.5%); margin: 0; margin-top: 14px;}
+    }
+    &__image {
+        @include block ($mt: 50px);
+    }
+}
+
+.fidelity {
+    @include block;
+    .container { max-width: 950px; }
+    &__heading {
+        .h2 { @include text($font-size: 25px, $color: var(--textblue)); margin: 0;}
+        .text { @include text($font-size: 20px, $font-weight: 350, $line-height:128.5%); width: 90%; }
+    }
+    &__concepts {
+        display: flex;
+        margin-top: 35px;
+        padding: 117px 102px;
+        flex-direction: column;
+        gap: 30px;
+        border: solid 1px #D8D8D8;
+        border-radius: 30px;
+        background-color: #F6F4F6;
+        .concept {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            width: 100%;
+            .h4 { @include text($font-size: 25px, $font-weight: 500, $color: var(--textblue)); margin: 26px 0 14px 0; }
+            .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 350, $line-height: 128.5%); margin: 0;}
+        }
+    }
+}
+
+.design {
+    @include block;
+    padding: 169px 350px;
+    background-color: #2A2C32;
+    &__heading {
+        width: 70%;
+        .h2 { @include text($font-size: 30px, $color: #fff); margin: 0;}
+        .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height:128.5%, $color: #fff); margin: 0; margin-top: 14px;}
+    }
+    &__images {
+        @include block ($mt: 73px);
+        display: flex;
+        gap: 32px;
+        .design__item {
+            text-align: center;
+            .h4 { @include text($font-size: 25px, $color: #fff); margin: 0; margin-top: 28px;}
+        }
+        
+    }
+}
+
+.reflection {
+    @include block;
+    &__heading {
+        .h2 { @include text($font-size: 30px, $color: var(--textblue)); margin: 0;}
+        .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height:128.5%); margin: 0; margin-top: 11px;}
+    }
+    &__content {
+        @include block($mt: 54px);
+        display: flex;
+        gap: 33px;
+        align-items: center;
+        .description { width: 84%; }
+        .text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 350, $line-height:128.5%); margin: 0; }
+        ul {
+            width: 85%;
+            margin-top: 50px;
+            padding-left: 25px;
+            list-style-image: url('../icons/reflection_vector.svg');
+            display: flex;
+            flex-direction: column;
+            gap: 29px;
+        }
+        .context { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 350, $line-height:128.5%); margin: 0; font-style: italic;}
+        .clip {
+            width: 100%;
+            .video { width: 100%; border-radius: 20px;}
+        }
+    }
+}
+
+.footer {
+    @include block;
+    position: relative;
+    height: 952px;
+    background: #F4EDF8;
+    overflow: hidden;
+    .circle-1, .circle-2, .circle-3, .line-1, .line-2 { position: absolute; z-index: 0; }
+    .circle-1 {
+        width: 585px;
+        height: 585px;
+        background-color: #D5D4FF;
+        border-radius: 100%;
+        filter: blur(200px);
+        top: 19%;
+        right: 20%;
+    }
+    .circle-2 {
+        width: 641px;
+        height: 563px;
+        background-color: #FFD2DD;
+        border-radius: 100%;
+        filter: blur(200px);
+        top: 14%;
+        left: 10%;
+    }
+    .circle-3 {
+        width: 112px;
+        height: 112px;
+        background-color: #FFD2E6;
+        border-radius: 100%;
+        top: 22%;
+        left: 26%;
+    }
+    .line-1 {
+        top: 14%;
+        right: 0%;
+    }
+    .line-2 {
+        width: 18%;
+        bottom: 27%;
+        left: 0%;
+    }
+    &__wrapper {
+        position: absolute;
+        z-index: 1; 
+        left: 1%;
+        
+    }
+    .container-xl {
+        padding: 0;
+    }
+    &-logo {
+        width: 100%;
+    }
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 55px;
+        padding-top: 108px;
+        padding-bottom: 92px;
+        border-bottom: solid 1px #D092BA;
+    }
+    &__text {
+        @include text($font-family: Mulish, $font-size: 50px, $color: var(--textblue));
+    }
+    &__bottom {
+        @include wrapper($justify: center, $gap: 223px);
+        padding: 90px 0;
+    }
+    .socials {
+        display: flex;
+        gap: 40px;
+    }
+    &__cta {
+        list-style: none;
+        li {
+            margin: 25px 0;
+            @include text($font-size: 25px, $line-height: 110%, $color: var(--textblue));
+        }
+    }
+    .email-cta {
+        padding: 35px;
+        background-color: #FFF;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 55px;
+    }
+    .text-cta {
+        @include text($font-size: 25px, $line-height: 110%, $color: var(--textblue));
+    }
+    .email-btn {
+        @include wrapper($justify: normal);
+        @include text($font-family: Mulish, $font-weight: 700, $color: #fff);
+        padding: 17px 28px;
+        border: none;
+        border-radius: 10px;
+        background-color: #242F65;
+    }
+}
+
+@media screen and (max-width: 1850px) {
+    .design {
+        padding: 169px 265px;
+    }
+    .footer {
+        .footer__text { font-size: 44px; }
+        .footer__wrapper { left: 2%; }
+        .footer .line-2 { bottom: 30%; }
+    }
+    
+}
+
+@media screen and (max-width: 1750px) {
+    .design {
+        padding: 169px 190px;
+    }
+    .footer {
+        .footer__wrapper { left: 1%; }
+        .line-1 { width: 25%; }
+        .line-2 { bottom: 30%; width: 13%; }
+        .footer__text { font-size: 40px; }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .footer{
+        .footer__wrapper { left: 2%; }
+        .footer__text { font-size: 34px; img { width: 45px; } }
+        .footer__bottom { gap: 180px; }
+        .footer .text-cta { font-size: 22px; }
+    }   
+}
+
+@media screen and (max-width: 1440px) {
+    .container { padding: 0 30px; }
+    .banner__bottom .container-xl { padding-left: 720px; }
+    .banner {
+        .banner__text {
+            font-size: 68px;
+        }
+        .banner__image-2 {
+            width: 60%;
+            left: 23%;
+        }
+    }
+    .problem {
+        &__wrapper { padding: 92px; }
+    }
+    .solution {
+        &-content { width: 80%; }
+    }
+    .research {
+        &__insights {
+            gap: 35px;
+            .insight {
+                width: 50%;
+            }
+        }
+    }
+    .fidelity {
+        .content { width: 80%; }
+    }
+    .footer {
+        height: 890px;
+        .footer__wrapper { left: 3%; }
+        .footer__text { font-size: 29px; img { width: 36px; }}
+        .footer__bottom { gap: 100px; }
+        .text-cta { font-size: 18px; }
+        .email-cta { gap: 40px; }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .header {
+        &__logo {
+            .logo { width: 11%; }
+            .logo-text { font-size: 34px; }
+        }
+    }
+    .banner {
+        &__top { padding: 93px 220px }
+        .container-xl { padding-left: 630px; }
+        .banner__image-2 { width: 54%; left: 29%; }
+    }
+    .problem {
+        &__wrapper { align-items: center; }
+        .problem-content { width: 50%; }
+        .problem-images { width: 50%; }
+        .btn { padding: 22px 20px; margin-right: 10px; }
+    }
+    .design { padding: 140px; }
+    .reflection {
+        &__content {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+    .footer {
+        height: 740px;
+        .footer__wrapper { left: 0 }
+        .footer__top { padding-top: 90px; }
+        .getintouch-btn {
+            img { width: 80%; }
+        }
+        .footer__text { font-size: 25px; img { width: 30px; } }
+        .footer__bottom { padding: 45px; }
+        .footer__cta {
+            li { font-size: 20px; }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        &__logo {
+            .logo { width: 10%; }
+            .logo-text { font-size: 26px; }
+        }
+        &__navbar {
+            .navbar-text { font-size: 16px; }
+        }
+    }
+    .banner {
+        .banner__text { font-size: 44px; }
+        .container-xl { padding: 57px 64px 0 490px; }
+        &__bottom { @include block($mt: 80px); }
+    }
+    .project {
+        @include block($mt: 80px);
+        .text { font-size: 18px; }
+        .project__btns .btn { font-size: 16px; padding: 10px 18px;}
+    }
+    .team {
+        @include block($mt: 80px);
+        &__wrapper { flex-direction: column; gap: 50px;}
+    }
+    .problem {
+        @include block($mt: 80px);
+        &__wrapper { 
+            padding: 50px 35px;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .btn { 
+            padding: 18px 28px;
+            font-size: 16px;
+        }
+        .problem-content {
+            width: 80%;
+            .subtext { font-size: 20px; }
+            .text { font-size: 18px; }
+        }
+        .problem-images { width: 60%; }
+    }
+    .solution {
+        @include block($mt: 80px);
+        &__wrapper {
+            flex-direction: column;
+        }
+    } 
+    .research {
+        @include block($mt: 80px);
+        &__heading .text { font-size: 22px; }
+        &__insights {
+            flex-wrap: wrap;
+        }
+        .insight { width: 45%; }
+    }
+    .storyboard, .ux-research {
+        @include block($mt: 80px);
+    }
+    .userflow {
+        @include block($mt: 80px);
+        &__image { margin-top: 80px; }
+    }
+    .fidelity {
+        @include block($mt: 80px);
+        &__concepts {
+            padding: 80px;
+        }
+    }
+    .design {
+        @include block($mt: 80px);
+        padding: 100px 70px;
+        &__heading { width: 100%; }
+    }
+    .reflection {
+        @include block($mt: 80px);
+    }
+    .footer {
+        @include block($mt: 80px);
+        height: 580px;
+        .footer__top { padding: 60px 0; }
+        .footer__bottom { gap: 80px; }
+        .footer__text { font-size: 18px; }
+        .getintouch-btn { width: 15%; img { width: 100%; } }
+        .footer__cta { margin-top: 0; padding-left: 20px; li { font-size: 18px; } }
+        .socials { gap: 20px; }
+        .email-cta { gap: 20px; padding: 20px;}
+        .text-cta { margin: 0; }
+        .email-btn { width: 50%; padding: 10px 20px; font-size: 14px; }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        .logo-text { font-size: 18px; }
+        &__navbar {
+            gap: 30px;
+        .navbar-text { font-size: 14px; }
+        }
+    }
+    .banner {
+        &__top {
+            padding: 55px 70px;
+        }
+        .container-xl { padding-left: 310px;}
+        .banner__image-2 { width: 60%; left: 19%; }
+    }
+    .project {
+        &__summary {
+            width: 100%;
+            .title { font-size: 26px; }
+            .text { font-size: 16px; }
+        }
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__details {
+            width: 100%;
+            .title { font-size: 26px; }
+            .content { padding: 40px; }
+        }
+    }
+    .team {
+        &__wrapper {
+            padding: 30px;
+            gap: 25px;
+            .members {
+                .member-img { width: 65%; }
+                .name, .position { font-size: 16px; }
+            }
+        }
+    }
+    .problem {
+        .problem-content {
+            width: 100%;
+            .title { font-size: 27px; img { width: 26px; } }
+            .subtext { font-size: 18px; }
+            .text { font-size: 16px; }
+        }
+        .problem-images { width: 80%; }
+        
+    }
+    .solution {
+        &__wrapper {
+            padding: 26px 50px;
+            .solution-content {
+                width: 100%;
+                .title { font-size: 27px; img { width: 26px; } }
+                .text { font-size: 18px; }
+            }
+            .solution-images { width: 80%; }
+        }
+
+    }
+    .research {
+        &__heading {
+            .h2 { font-size: 27px; }
+            .text { width: 100%; font-size: 18px; }
+        }
+        &__insights {
+            .insight {
+                padding: 30px;
+                .h4 { font-size: 22px; }
+                .text { font-size: 16px; }
+            }
+        }
+    }
+    .storyboard {
+        &__heading {
+            .h2 { font-size: 27px; }
+            .text { font-size: 18px; }
+        }
+    }
+    .userflow {
+        &__heading {
+            .h2 { font-size: 27px; }
+            .text { font-size: 18px; }
+        }
+        &__image { margin-top: 40px; }
+    }
+    .ux-research {
+        &__heading {
+            .h2 { font-size: 27px; }
+            .text { font-size: 18px; }
+        }
+    }
+    .fidelity {
+        &__concepts { padding: 50px; }
+        .concept { flex-wrap: wrap; justify-content: center; }
+        .image { width: 60%; }
+        .content { width: 100%; }
+    }
+    .design {
+        &__heading {
+            .h2 { font-size: 27px; }
+            .text { font-size: 18px; }
+        }
+        padding: 70px 40px;
+        &__images {
+            flex-wrap: wrap;
+            margin-top: 50px;
+            .design__item .h4 { font-size: 22px; margin-top: 20px;}
+        }
+        .img { width: 75%; }
+    }
+    .reflection {
+        &__heading {
+            .h2 { font-size: 27px; }
+            .text { font-size: 18px; }
+        }
+        &__content {
+            margin-top: 40px;
+            .description {
+                width: 100%;
+                .text { font-size: 18px; }
+            }
+            ul {
+                width: 100%;
+                li { font-size: 18px; }
+            }
+        }
+    }
+    .footer {
+        height: 450px;
+        .footer__top { padding: 40px 0; gap: 40px;}
+        .footer__text { font-size: 14px; img { width: 14px; } }
+        .footer__bottom { gap: 50px; padding: 30px;}
+        .footer__cta li{ font-size: 14px; }
+        .text-cta { font-size: 14px; text-align: center;}
+        .email-cta { flex-direction: column; }
+        .email-btn { width: 51%; padding: 10px; img { width: 15%; } }
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .header {
+        &__navbar { display: none; }
+        &__cta { display: block; } 
+    }
+    .banner {
+        .banner__btn { font-size: 16px; img { width: 10%; } }
+        .banner__text { font-size: 36px; }
+        .container-xl { padding-left: 250px; }
+        .banner__image-2 { width: 64%; left: 13%; }
+    }
+    .project {
+        &__summary  {
+            .title { margin-top: 0; }
+            .project__btns { gap: 7px; }
+        }
+    }
+    .problem {
+        .problem-content {
+            .title { margin-top: 0; }
+            .subtext { font-size: 16px; }
+            .text { font-size: 14px; }
+        }
+        .problem-images { width: 90%; }
+        .btn { padding: 14px; font-size: 14px; }
+    }
+    .solution {
+        &__wrapper { gap: 30px; }
+        .solution-content .text { font-size: 16px; }
+    }
+    .research {
+        &__heading .text { font-size: 16px; }
+        .insight {
+            .h4 { font-size: 20px; }
+            .text { font-size: 14px; }
+        } 
+    }
+    .storyboard {
+        &__heading .text { font-size: 16px; }
+    }
+    .userflow {
+        &__heading .text { font-size: 16px; }
+    }
+    .ux-research {
+        &__heading .text { font-size: 16px; }
+    }
+    .fidelity {
+        &__heading .text { font-size: 16px; }
+        .concept {
+            gap: 20px;
+            .content {
+                .h4 { font-size: 22px; }
+                .text { font-size: 16px; }
+            }
+        }
+    }
+    .design {
+        &__heading .text { font-size: 16px; }
+        &__images {
+            .design__item .h4 { font-size: 20px; }
+        }
+    }
+    .reflection {
+        &__heading .text { font-size: 16px; }
+        &__content .description {
+            ul { margin-top: 35px; }
+            .text { font-size: 16px; }
+            .context { font-size: 16px; }
+        }
+    }
+    .footer {
+        height: 420px;
+        .footer__top { padding: 35px 0;}
+        .footer__text { padding: 0 17px; }
+        .footer__cta { padding-left: 0; margin: 0; li { margin-top: 0; margin-bottom: 20px; } }
+        .email-btn { width: 60%; }
+        .email-cta { gap: 15px; }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner {
+        .banner__text { font-size: 32px; }
+        .container-xl { padding: 45px 45px 0 175px; }
+        .banner__image-2 { width: 65%; left: 11%; }
+    }
+    .project {
+        .project__btns {
+            .btn { font-size: 12px; padding: 10px 12px; }
+        }
+    }
+    .team {
+        &__wrapper .title { margin-top: 0; }
+    }
+    .problem {
+        .btn { margin-right: 0; }
+    }
+    .solution {
+        .solution-images { width: 90%; }
+    }
+    .research {
+        &__insights { justify-content: center; }
+        .insight {
+            width: 80%;
+        }
+    }
+    .storyboard {
+        &__images {
+            flex-wrap: wrap;
+            justify-content: center;
+            .image { width: 80%; }   
+        }
+    }
+    .fidelity {
+        .image { width: 80%; }
+    }
+    .design {
+        .img { width: 90%; }
+    }
+    .footer {
+        height: 500px;
+        .footer__top {
+            gap: 30px;
+        }
+        .footer__bottom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .email-btn { width: 44%; }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .banner {
+        &__top {
+            padding: 55px;
+            .banner__text { font-size: 28px; }
+        }
+        .container-xl { padding: 45px 45px 0 145px; }
+        .banner__image-2 { left: 10%; }
+    }
+    .project {
+        &__summary {
+            .title { font-size: 24px; }
+            .text { font-size: 14px; }
+        }
+        &__details {
+            .title { font-size: 24px; }
+            .h4 { font-size: 18px; }
+            .name { font-size: 16px; }
+            .website { font-size: 16px; }
+        }
+    }
+    .team {
+        &__wrapper .title { font-size: 24px; }
+    }
+    .problem {
+        .problem-content {
+            .title { font-size: 24px; }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    .solution {
+        .solution-content {
+            .h2 { font-size: 24px; }
+            .text { font-size: 14px; }
+        } 
+    }
+    .research {
+        &__heading {
+            .h2 { font-size: 24px; }
+            .text { font-size: 14px; }
+        }
+        &__insights { gap: 25px; }
+    }
+    .storyboard {
+        &__heading {
+            .h2 { font-size: 24px; }
+            .text { font-size: 14px; }
+        }
+    }
+    .userflow {
+        &__heading {
+            .h2 { font-size: 24px; }
+            .text { font-size: 14px; }
+        }
+    }
+    .ux-research {
+        &__heading {
+            .h2 { font-size: 24px; }
+            .text { font-size: 14px; }
+        }
+        &__image { margin-top: 40px; }
+    }
+    .fidelity {
+        &__heading {
+            .h2 { font-size: 24px; }
+            .text { font-size: 14px; }
+        }
+        &__concepts { padding: 30px; }
+    }
+    .design {
+        padding: 40px;
+        .container { padding: 0; }
+        &__heading {
+            .h2 { font-size: 24px; }
+            .text { font-size: 14px; }
+        }
+    }
+    .reflection {
+        &__heading {
+            .h2 { font-size: 24px; }
+            .text { font-size: 14px; }
+        }
+        &__content {
+            margin-top: 30px;
+            .description .text { font-size: 14px; }
+            .description .context { font-size: 14px; }
+        }
+    }
+}
