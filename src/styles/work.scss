@@ -1,0 +1,86 @@
+@mixin text($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textblue)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+.work {
+    &__project {
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        margin-bottom: 140px;
+        display: flex;
+        padding: 73px 106px;
+        justify-content: space-between;
+        background-color: #eef0f9;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .pattern {
+            position: absolute;
+            z-index: 1;
+            background-color: #D9DFF2; 
+        }
+        &-pattern-1 {
+            width: 314px;
+            height: 314px;
+            border-radius: 100%;
+            top: -44%;
+            left: -11%;
+        }
+        &-pattern-2 {
+            width: 1300px;
+            height: 1300px;
+            border-radius: 253px 26px 0 0;
+            top: 0%;
+            right: -82%;
+        }
+        &-info {
+            width: calc(50% - 57px);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            &-title {
+                @include text($font-family: Fraunces, $font-size: 40px, $font-weight: 600, $line-height: 110%);
+            }
+            &-tag {
+                @include text($font-weight: 600, $color: #6878AC);
+                border-radius: 10px;
+                border: none;
+                padding: 11px 20px;
+                font-size: 18px;
+                background-color: #D9DEEE ;
+            }
+            &-text {
+                @include text($font-family: Mulish, $line-height: 100%, $color: #525665);
+            }
+            &-btn {
+                padding: 19px 38px;
+                border-radius: 10px;
+                @include text($font-family: Mulish, $font-weight: 700, $color: #fff);
+                border: none;
+                text-decoration: none;
+                background-color: #FF774C;
+            }
+        }
+        &-illustration {
+            position: relative;
+            width: calc(50% - 57px);
+            &-img1 {
+                position: absolute;
+                z-index: 1;
+                top: -21%;
+                left: 0;
+            }
+            &-img2 {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 16%;
+            }
+        }
+    }
+}

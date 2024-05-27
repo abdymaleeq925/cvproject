@@ -1,0 +1,69 @@
+@mixin text($font-family: Fraunces, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textblue)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin wrapper($display: flex, $justify: space-between, $align: center, $gap: 10px) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+.testimonials {
+    &__wrapper {
+        margin-top: 60px;
+        background-color: #FFF4F0;
+        padding: 110px 98px;
+    }
+    &__heading {
+        width: 50%;
+        &-title {
+            @include text($font-size: 40px, $font-weight:  600, $line-height: 100%);
+        }
+    }
+    &__list {
+        margin-top: 60px;
+        &-item {
+            &-heading {
+                @include wrapper($justify: normal, $gap: 15.5px);
+                &-title-name {
+                    @include text($font-size: 25px, $font-weight: 600, $line-height: 110%);
+                    margin: 0;
+                }
+                &-title-position {
+                    @include text($font-family: Mulish, $color: #525665);
+                    margin-top: 5px;
+                    margin-bottom: 0;
+                }
+            }
+            &-content {
+                @include wrapper($gap: 20px);
+                &-img { padding: 25px 20px; img { height: 46px; width: 46px; max-width: none;}} 
+                &-info-text {
+                    @include text($font-size: 22px, $font-weight: 400, $line-height: 146.5%, $color: #525665);
+                    margin: 0;
+                }  
+            }
+            &:not(:last-child) {
+                .line {
+                    position: relative;
+                    padding: 50px 0;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 60%;
+                        height: 1px;
+                        background-color: #D0A798;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                    } 
+                }
+            }
+        } 
+    }
+}

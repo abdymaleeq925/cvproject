@@ -1,0 +1,118 @@
+@mixin text($font-family: Fraunces, $font-size: 25px, $font-weight: 500, $line-height: 128.5%, $color: var(--textblue)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin wrapper($display: flex, $justify: center, $align: center, $gap: 10px) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+.footer {
+    margin-top: 120px;
+    position: relative;
+    height: 952px;
+    background: #F4EDF8;
+    overflow: hidden;
+    .circle-1, .circle-2, .circle-3, .line-1, .line-2 { position: absolute; z-index: 0; }
+    .circle-1 {
+        width: 585px;
+        height: 585px;
+        background-color: #D5D4FF;
+        border-radius: 100%;
+        filter: blur(200px);
+        top: 19%;
+        right: 20%;
+    }
+    .circle-2 {
+        width: 641px;
+        height: 563px;
+        background-color: #FFD2DD;
+        border-radius: 100%;
+        filter: blur(200px);
+        top: 14%;
+        left: 10%;
+    }
+    .circle-3 {
+        width: 112px;
+        height: 112px;
+        background-color: #FFD2E6;
+        border-radius: 100%;
+        top: 22%;
+        left: 26%;
+    }
+    .line-1 {
+        top: 14%;
+        right: 0%;
+    }
+    .line-2 {
+        width: 18%;
+        bottom: 27%;
+        left: 0%;
+    }
+    &__wrapper {
+        position: absolute;
+        z-index: 1; 
+        left: 13%;
+        
+    }
+    // .container-xl {
+    //     padding: 0;
+    // }
+    &-logo {
+        width: 100%;
+    }
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 55px;
+        padding-top: 108px;
+        padding-bottom: 92px;
+        border-bottom: solid 1px #D092BA;
+    }
+    &__text {
+        @include text($font-family: Mulish, $font-size: 50px);
+    }
+    &__bottom {
+        @include wrapper($gap: 223px);
+        padding: 90px 0;
+    }
+    .socials {
+        display: flex;
+        gap: 40px;
+    }
+    &__cta {
+        list-style: none;
+        li {
+            margin: 25px 0;
+            @include text($line-height: 110%);
+        }
+    }
+    .email-cta {
+        padding: 35px;
+        background-color: #FFF;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+        gap: 60px;
+    }
+    .text-cta {
+        @include text($line-height: 110%);
+    }
+    .email-btn {
+        @include wrapper();
+        @include text($font-family: Mulish, $font-size: 20px, $font-weight: 700, $color: #fff);
+        padding: 17px 28px;
+        border: none;
+        border-radius: 10px;
+        background-color: #242F65;
+    }
+}

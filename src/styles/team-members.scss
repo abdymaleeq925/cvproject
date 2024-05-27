@@ -1,0 +1,32 @@
+@mixin text($font-family: Fraunces, $font-size: 18px, $font-weight: 600, $line-height: 110%, $color: var(--textblue)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+.team {
+    margin-top: 120px;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        padding: 50px 63px;
+        border: solid #D3D3D3;
+        border-radius: 20px;
+    }
+    &__title {
+        @include text($font-size: 30px);
+    }
+    &__members {
+        display: flex;
+        gap: 50px;
+        text-align: center;
+        &-person {
+            &-img { border-radius: 100%; }
+            &-name { @include text($font-size: 20px, $font-weight: 350); margin: 11px 0 7px 0;}
+            &-position { @include text($font-family: Mulish, $line-height: 128.5%, $color: #525665); margin: 0;}
+        }
+    }
+}

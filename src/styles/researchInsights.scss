@@ -1,0 +1,35 @@
+@mixin text($font-family: Fraunces, $font-size: 25px, $font-weight: 600, $line-height: 110%, $color: var(--textblue)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+.research {
+    margin-top: 120px;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 47px;
+    }
+    &__heading {
+        &-title { @include text($font-size: 30px); margin: 0;}
+        &-text {
+            @include text($font-weight: 350, $line-height:128.5%, $color: #525665);
+            margin-top: 19px;
+        }
+    }
+    &__insights {
+        display: flex;
+        justify-content: space-between;
+        gap: 42px;
+        &-item {
+            padding: 40px 30px;
+            border: solid 1px #D8D8D8;
+            border-radius: 10px;
+            &-title { @include text(); margin: 26px 0 14px 0; }
+            &-text { @include text($font-family: Mulish, $font-size: 20px, $font-weight: 350, $line-height: 128.5%, $color: #525665);}
+        }
+    }
+}

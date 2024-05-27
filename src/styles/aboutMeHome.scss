@@ -1,0 +1,48 @@
+@mixin text($font-family: Fraunces, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textgray)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin wrapper($display: flex, $justify: space-between, $align: center, $gap: 10px) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin block($mt: 120px, $mb: 70px) {
+    margin-top: $mt;
+    margin-bottom: $mb;
+}
+
+.about-me-home {
+    @include block($mb: 0);
+    background-color: #E8EFF0;
+    padding-top: 3px;
+    padding-bottom: 180px;
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__text {
+        width: 50%;
+        @include text($font-family: Mulish, $font-size: 20px, $color: #525665);
+        span {
+            color: #FF774C;
+        }
+    }
+    &__btn {
+        width: 200px;
+        position: absolute;
+        z-index: 1;
+        bottom: -30%;
+        right: 4%;
+        border: none;
+        background-color: transparent;
+    }
+}

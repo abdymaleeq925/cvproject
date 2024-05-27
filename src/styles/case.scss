@@ -138,41 +138,39 @@ img { max-width: 100%; }
     
 }
 
-.project {
+.project-summary {
     @include block;
     &__wrapper {
         display: flex;
         gap: 23px;
     }
-    &__summary {
+    &__info {
         width: 50%;
-        .title { @include text ($font-size: 30px, $color: var(--textblue)); }
-        .text { @include text ($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height: 128.5%); }
-        .project__btns {
+        &-title { @include text ($font-size: 30px, $color: var(--textblue)); }
+        &-text { @include text ($font-family: Mulish, $font-size: 20px, $font-weight: 500, $line-height: 128.5%); }
+        &-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            .btn {
+            &-item {
                 @include text ($font-family: Mulish, $font-weight: 500, $line-height: 148%, $color: #7390F9);
                 border-radius: 5px;
                 border-color: #7390F9;
                 background-color: transparent;
                 padding: 10px 25px;
-
             }
         }
     }
     &__details {
         width: 50%;
-        .title { @include text ($font-size: 30px, $color: var(--textblue)); }
-        .content {
+        &-title { @include text ($font-size: 30px, $color: var(--textblue)); }
+        &-content {
             padding: 52px 58px;
             background-color: #F5F5F5;
             border-radius: 20px;
-        }
-        .h4 { @include text ($font-size: 20px, $color: var(--textblue)); margin: 0;}
-        .name { @include text($font-family: Mulish, $font-weight: 500, $line-height: 128.5%); margin: 5px 0 24px 0;}
-        .website { @include text ($font-family: Mulish, $font-weight: 700, $line-height: 128.5%, $color: #7390F9); text-decoration: underline; margin-top: 5px; margin-bottom: 24px;}
+            &-heading { @include text ($font-size: 20px, $color: var(--textblue)); margin: 0;}
+            &-name { @include text($font-family: Mulish, $font-weight: 500, $line-height: 128.5%); margin: 5px 0 24px 0;}
+        }   
     }
 }
 
