@@ -13,7 +13,7 @@
         gap: 23px;
     }
     &__info {
-        width: 50%;
+        width: 70%;
         &-title { @include text ($font-family: Fraunces, $font-size: 30px); }
         &-text {
             @include text ($line-height: 128.5%, $color: #525665);
@@ -46,11 +46,70 @@
             background-color: #F5F5F5;
             border-radius: 20px;
             &-item {
-                margin-bottom: 24px;
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
                 &-heading { @include text ($font-family: Fraunces); }
                 &-name { @include text($line-height: 128.5%); margin-top: 5px;}
                 &-link { @include text($line-height: 128.5%); margin-top: 5px; text-decoration: underline;}
             }
         }   
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .project-summary {
+        margin-top: 90px;
+        &__info {
+            width: 60%;
+            &-title { font-size: 26px; }
+            &-text { font-size: 16px; }
+            &-tags-item { font-size: 14px; padding: 10px 20px;}
+        }
+        &__details {
+            &-title { font-size: 26px; }
+            &-content {
+                padding: 45px;
+                &-item {
+                    &-heading { font-size: 16px; }
+                    &-name, a { font-size: 16px; }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .project-summary {
+        margin-top: 80px;
+        &__wrapper {
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__info {
+            width: 100%;
+        }
+        &__details { width: 65%; }
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .project-summary {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-summary {
+        &__details { width: 100%; }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .project-summary {
+        &__info-tags-item {
+            font-size: 12px;
+            padding: 10px 16px;
+        }
     }
 }

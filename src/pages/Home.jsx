@@ -1,88 +1,36 @@
-import React from 'react';
+import React, {useRef} from 'react';
 
 import { Work, Services, Banner, Titles, AboutMeHome, Testimonials } from '../components';
 
-import image989 from '../icons/image 989.svg';
-import image900 from '../icons/image 900.svg';
-import image2 from '../img/Image (2).svg';
-import testimonials from '../icons/testimonials.svg';
+import { projects, services, testimonials } from '../data/utils';
+
+import image989 from '../icons/image989.svg';
+import image900 from '../icons/image900.svg';
+import aboutmepic from '../img/aboutmepicture.jpeg';
+import testimonialslogo from '../icons/testimonials.svg';
+
+
 
 
 const Home = () => {
+  const scrollDownRef = useRef();
+
   return (
     <>
-      <Banner title="Hi, I am Abdymalik!" text="a UX Designer with years experience working at Fraxos" boldText="JS FullStack" buttonScroll/>
+      <Banner title="Hi, I am Abdymalik!" text="graduate with a few showcase projects" boldText="JS FullStack" buttonScroll scrollDownRef={scrollDownRef}/>
       <Titles name="work" image={image989}/>
-      <Work 
-        projects = {[
-          {
-            title : "Re-Design For The AppMade Easy",
-            tags : ["User Research", "UX Design"],
-            text : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-            image1 : require("../img/Screen-21 3.svg").default,
-            image2 : require("../img/Image.svg").default,
-            slug : "appmade-redesign"
-          },
-          {
-            title : "SaaSup Website For Unique Start-Up Brands",
-            tags : ["Programming", "MangooDB"],
-            text : "It is a long established fact that a reader.",
-            image1 : require("../img/Screen-21 3.svg").default,
-            image2 : require("../img/Image.svg").default,
-            slug : "saasup-website"
-          },
-
-        ]}
-        />
+      <Work projects = { projects } scrollDownRef = {scrollDownRef}/>
       <AboutMeHome 
-        text="Im a UX Designer, Over the past 10+ years I've created well-crafted mobile and web apps by connecting business goals with user needs. Currently Service and Interaction Designer @Fraxos office. Recently graduated from UC Berkeley, focusing on Interaction Design & Design Emerging Technology.Formerly at Electronic Arts, Apple, Sea Group, Deutsche Bank and JPMorgan Chase & Co." 
-        image={image2}
+        text="I am a JS FullStack graduate from ITC BootCamp in Almaty. I've created various Telegram bots and well-designed web-pages that are including HTML/CSS, React, NodeJS, MangooDB and several APIs. I am patient, diligent, good executor, and I can contribute well in teamwork. I want keep going learning programming on a working basis and have an opportunity to contribute my knowledge and effort." 
+        image={aboutmepic}
       />
       <Titles name="services" image={image900}/>
       <Services
-        items = {[
-          {
-            icon: require("../img/Icon.svg").default,
-            title : "Mobile App",
-            text : "It is a long established fact that reader will be distractedthe.",
-            fieldText : ["Web and Mobile App Design", "Front-end Development"]
-          },
-          {
-            icon: require("../icons/Design.svg").default,
-            title : "UX/UI design",
-            text : "lorem ipsum services and any other text that came to my mind furing this project",
-            fieldText : ["Web Design and Landing", "Skills on Figma and Adobe"]
-          },
-          {
-            icon: require("../icons/Lunacy.svg").default,
-            title : "Motion web design",
-            text : "He has excellent communication skills and uses robust workflows.",
-            fieldText : ["Python", "Django"]
-          },
-        ]}
+        items = { services }
       />
-      <Titles name="testimonials" image={testimonials}/>
+      <Titles name="testimonials" image={testimonialslogo}/>
       <Testimonials
-        recommendations = {[
-          {
-            authorProfile : require("../img/Image (3).svg").default,
-            authorName : "Marilyn Monroe",
-            authorPosition : "Condent Writer",
-            text : "We worked with David designing our backend web app from scratch and we are delighted with the results. He has excellent communication skills and uses robust workflows that allowed me and my team to work with him efficiently."
-          },
-          {
-            authorProfile : require("../icons/profilepic.svg").default,
-            authorName : "Zinedine Zidane",
-            authorPosition : "Super Mario Boss",
-            text : "We worked with David designing our backend web app from scratch and we are delighted with the results. He has excellent communication"
-          },
-          {
-            authorProfile : require("../icons/profilepic2.svg").default,
-            authorName : "John Cena",
-            authorPosition : "Wrestler",
-            text : "We worked with David designing our backend web app from scratch and we are delighted with the results."
-          },
-        ]}
+        recommendations = { testimonials }
         />
     </>
   )

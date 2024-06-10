@@ -21,12 +21,60 @@
     }
     &__members {
         display: flex;
+        flex-wrap: wrap;
         gap: 50px;
         text-align: center;
         &-person {
             &-img { border-radius: 100%; }
             &-name { @include text($font-size: 20px, $font-weight: 350); margin: 11px 0 7px 0;}
             &-position { @include text($font-family: Mulish, $line-height: 128.5%, $color: #525665); margin: 0;}
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .team {
+        &__wrapper {
+            gap: 40px;
+            padding: 50px;
+        }
+        &__members {
+            gap: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .team {
+        margin-top: 90px;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__title { font-size: 26px; }
+        &__members-person {
+            &-img { width: 70px; }
+            &-name { font-size: 17px; }
+            &-position { font-size: 15px; }
+        }
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .team {
+        &__members {
+            justify-content: space-around;
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .team {
+        margin-top: 80px;
+        &__wrapper {
+            padding: 40px;
+        }
+        &__title {
+            font-size: 24px;
         }
     }
 }

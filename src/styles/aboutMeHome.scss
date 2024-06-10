@@ -26,8 +26,8 @@
     &__wrapper {
         position: relative;
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
     }
     &__text {
         width: 50%;
@@ -36,13 +36,84 @@
             color: #FF774C;
         }
     }
+    &__picture {
+        width: 30%;
+        img {
+            border-radius: 20px;
+        }
+    }
     &__btn {
-        width: 200px;
+        width: 160px;
         position: absolute;
         z-index: 1;
-        bottom: -30%;
-        right: 4%;
+        bottom: -16%;
+        right: 12%;
         border: none;
         background-color: transparent;
+    }
+}
+@media screen and (max-width: 1439px) {
+    .about-me-home {
+        &__btn { width: 160px; bottom: -24%; right: 7%;}
+    }
+}
+@media screen and (max-width: 1199px) {
+    .about-me-home {
+        padding-bottom: 140px;
+        &__text { font-size: 16px; }
+        &__btn { width: 150px; right: 3%; }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-me-home {
+        padding-bottom: 110px;
+        margin-top: 100px;
+        &__text { font-size: 16px; }
+        &__btn { width: 115px; }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-me-home {
+        margin-top: 90px;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__text {
+            margin-bottom: 30px;
+        }
+        &__picture {
+            width: 85%;
+        }
+        &__btn {
+            bottom: -12%;
+            right: 10%;
+        }
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .about-me-home {
+        padding-bottom: 90px;
+        &__btn {
+            width: 100px;
+            bottom: -10%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-me-home {
+        margin-top: 60px;
+        padding-bottom: 70px;
+        &__text { font-size: 14px; }
+        &__btn { width: 80px; }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .about-me-home {
+        &__btn { width: 70px; }
     }
 }

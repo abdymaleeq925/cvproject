@@ -1,0 +1,95 @@
+@mixin text($font-family: Fraunces, $font-size: 20px, $font-weight: 600, $line-height: 110%, $color: var(--textblue)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+.featledge {
+    margin-top: 90px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 73px 58px;
+    display: flex;
+    justify-content: space-between;
+    &__feature, &__knowledge {
+        &-title {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            gap: 10px;
+            @include text();
+        }
+        ul {
+            list-style-image: url('../icons/bluetick.svg');
+            
+        }
+        li p {
+            @include text($font-family: Mulsih, $font-size: 18px, $font-weight: 400, $line-height: 146%, $color: #525665);
+            margin: 0;
+            padding: 10px 0;
+        }
+    }
+    &__knowledge {
+        ul {
+            gap: 100px;
+            column-count: 2;
+        }
+        
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .featledge {
+        gap: 20px;
+        &__knowledge ul {
+            gap: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .featledge {
+        margin-top: 40px;
+        padding: 50px;
+        gap: 10px;
+        &__knowledge, &__feature {
+            li p {
+                font-size: 14px;
+            }
+            ul {
+                padding-left: 30px;
+            }
+        }
+        &__knowledge ul {
+            gap: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .featledge {
+        margin-top: 10px;
+        flex-direction: column;
+        padding: 40px;
+        hr { display: none; }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .featledge {
+        margin-top: 0;
+        padding: 40px 25px;
+        &__knowledge ul {
+            gap: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .featledge {
+        padding: 25px;
+        &__knowledge ul { column-count: 1; }
+    }
+}

@@ -55,13 +55,17 @@
         display: none;
         &-burger-menu {
             display: flex;
-            padding-top: 70px;
-            padding-right: 40px;
-            padding-left: 40px;
+            flex-direction: column;
+            gap: 20px;
+            align-items: start;
+            padding-top: 24px;
+            padding-left: 25px;
             padding-bottom: 30px;
+            width: 100%;
+            height: 100vh;
             position: fixed;
             background-color: #fff;
-            right: -50%;
+            right: -200%;
             top: 0;
             transition: all 0.5s ease-in-out;
             box-shadow: 5px 0px 10px 0px #aaa;
@@ -69,30 +73,44 @@
             &.show-menu {
                 z-index: 2;
                 top: 0;
-                right: 0;
+                right: -45%;
             }
             &-links {
                 list-style: none;
-                padding-left: 0;
+                padding-left: 10px;
                 margin: 0;
                 li {
                     padding: 20px;
                     text-align: center;
                 }
                 a {
+                    font-size: 20px;
                     font-family: Fraunces;
                     color: #242F65;
                     text-decoration: none;  
                 }
             }
+            .burger__logo {
+                display: flex;
+                gap: 10px;
+                text-decoration: none;
+                &-icon { width: 22px; }
+                &-title {
+                    @include text($font-family: Mulish, $font-size: 20px, $font-weight: 800, $line-height: 40.7px, $color: var(--textblue));
+                }
+            }
+            .social-media-icons {
+                display: flex;
+                gap: 30px;
+            }
         }
         &-burger {
             display: block;
             height: 23px;
-            width: 35px;
+            width: 29px;
             position: absolute;
-            top: 28px;
-            right: 20px;
+            top: 34px;
+            right: 30px;
             z-index: 2;
             display: flex;
             flex-direction: column;
@@ -118,14 +136,121 @@
         }
         .close-burger{
             .line1 {
-                transform: rotate(35deg);
+                transform: rotate(45deg);
             }
             .line2 {
                 transform: scaleY(0);
             }
             .line3 {
-                transform: rotate(-35deg);
+                transform: rotate(-45deg);
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        &__wrapper { margin-top: 25px; }
+        &__logo {
+            .logo { width: 26px; }
+            &-text { font-size: 26px; }
+        }
+        &__navlink-text { font-size: 17px; }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        &__navlink {
+            display: none;
+        }
+        &__cta {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .header {
+        &__logo {
+            .logo { width: 22px; }
+            &-text { font-size: 22px; }
+        }
+        &__cta {
+            .show-menu { right: -35%; }
+            &-burger {
+                height: 19px;
+                width: 23px;
+                &-menu {
+                    &-links a {
+                        font-size: 18px;
+                    }
+                    .burger__logo {
+                        &-icon { width: 18px; }
+                        &-title {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        &__logo {
+            .logo { width: 20px; }
+            &-text { font-size: 20px; }
+        }
+        &__cta {
+            .show-menu { right: -30%; }
+            &-burger {
+                height: 17px;
+                width: 21px;
+                .line { height: 3px; }
+                &-menu {
+                    &-links li {
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .header {
+        &__wrapper {
+            margin-top: 10px;
+        }
+        &__cta-burger {
+            top: 21px;
+            right: 29px;
+            height: 15px;
+            width: 18.5px;
+            &-menu {
+                padding-top: 8px;
+                gap: 10px;
+                &-links {
+                    li {
+                        padding-top: 10px;
+                    }
+                    a {
+                        font-size: 14px;
+                    }
+                }
+                .burger__logo {
+                    &-title { font-size: 13px; }
+                    &-icon { width: 15px; }
+                }
+            }
+        }
+        &__logo {
+            gap: 5px;
+            &-text { font-size: 16px; }
+            .logo { width: 16px; }
         }
     }
 }

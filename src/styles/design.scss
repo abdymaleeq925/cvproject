@@ -10,6 +10,11 @@
     margin-top: 120px;
     padding: 169px 0;
     background-color: #2A2C32;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+    }
     &__list {
         &-heading {
             &-title { @include text($font-size: 30px); }
@@ -21,14 +26,68 @@
         &-images {
             margin-top: 73px;
             display: flex;
+            justify-content: space-evenly;
             gap: 32px;
             &-item {
+                
                 text-align: center;
                 &-text {
                     @include text($font-size: 25px);
                     margin-top: 28px;
                 }
             } 
+        }
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    .design {
+        padding: 130px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .design {
+        padding: 90px 0;
+        margin-top: 100px;
+        &__wrapper {
+            gap: 60px;
+        }
+        &__list-heading {
+            &-title { font-size: 28px; }
+            &-text { font-size: 18px; }
+        }
+        &__list-images-item-text {
+            font-size: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .design {
+        padding: 65px 0;
+        margin-top: 80px;
+        &__wrapper {
+            gap: 40px;
+        }
+        &__list {
+            &-heading {
+                &-title { font-size: 26px; }
+                &-text { font-size: 16px; }
+            }
+            &-images {
+                flex-direction: column;
+                &-item-text { margin-top: 20px; }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .design {
+        &__list-images-item-text {
+            font-size: 20px;
         }
     }
 }

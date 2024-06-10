@@ -30,7 +30,7 @@ const ProjectSummary = ({summaryText, summaryTags, itemObj}) => {
                                         {
                                             item.scope === "Website" ? 
                                             <Link to="/" class="project-summary__details-content-item-link">{item.name}</Link> : 
-                                        <p class="project-summary__details-content-item-name">{item.name}</p>
+                                            <p class="project-summary__details-content-item-name">{item.name}</p>
                                         }
                                         
                                     </div>

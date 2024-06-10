@@ -12,12 +12,12 @@ const Design = ({designs}) => {
                         designs?.map(design => (
                             <div className="design__list">
                                 <div class="design__list-heading">
-                                    <h2 class="design__list-heading-title">{design.headingTitle}</h2>
-                                    <p class="design__list-heading-text">{design.headingText}</p>
+                                    <h2 class="design__list-heading-title">{design.designHeadingTitle}</h2>
+                                    <p class="design__list-heading-text">{design.designHeadingText}</p>
                                 </div>
                                 <div class="design__list-images">
                                     {
-                                        design?.images?.map(image => (
+                                        design?.designImages?.map(image => (
                                             <div class="design__list-images-item">
                                                 <img src={image.image} alt="" class="design__list-images-item-img"/>
                                                 <h4 class="design__list-images-item-text">{image.text}</h4>

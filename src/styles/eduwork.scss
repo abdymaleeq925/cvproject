@@ -1,0 +1,184 @@
+@mixin text($font-family: Fraunces, $font-size: 20px, $font-weight: 600, $line-height: 128.5%, $color: var(--textblue)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+.eduwork {
+    margin-top: 120px;
+    &__experience {
+        display: flex;
+        &-title {
+            width: 90%;
+            &-name {
+                display: flex;
+                white-space: nowrap;
+                align-items: center;
+                gap: 10px;
+                @include text($font-size: 30px, $line-height: 110%);
+            }
+        }
+        &-list {
+            width: 100%;
+            &-info {
+                display: flex;
+                align-items: baseline;
+                gap: 22px;
+                margin-bottom: 60px;
+                &:not(:last-child){
+                    .eduwork__experience-list-info-content {
+                        position: relative;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 25px;
+                            left: -30px;
+                            width: 1px;
+                            height: calc(100% + 60px);
+                            background-color: #cccccc;
+                        }
+                    }
+                }
+                &-period {
+                    width: 150px;
+                    @include text($font-family: Mulish, $font-weight: 500, $color: #525665)
+                }
+                .circle {
+                    height: 15px;
+                    width: 15px;
+                    background-color: #7390F9;
+                    border-radius: 100%;
+                    position: relative;
+                }
+                &-content {
+                    width: calc(100% - (150px + 15px + 44px));
+                    &-title {
+                        @include text($font-size: 25px);
+                    }
+                    &-degree {
+                        margin: 12px 0;
+                        @include text($font-family: Mulish, $color: #7390F9);
+                    }
+                    &-text {
+                        @include text($font-family: Mulish, $font-weight:300, $color: #525665);
+                        font-style: italic;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .eduwork {
+        &__experience {
+            &-title {
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .eduwork {
+        margin-top: 80px;
+        &__experience {
+            flex-direction: column;
+            gap: 30px;
+            &-title-name { font-size: 24px; img { width: 26px; }}
+            &-list-info {
+                &:not(:last-child) 
+                .eduwork__experience-list-info-content::before {
+                    left: -27.5px;
+                    top: 22px;
+                    height: calc(100% + 50px);
+                }
+                .circle {
+                    height: 10px;
+                    width: 10px;
+                }
+                &-period { width: 130px; font-size: 18px; }
+                &-content {
+                    &-title { font-size: 22px; }
+                    &-degree, &-text { font-size: 16px; }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .eduwork {
+        &__experience {
+            &-title-name { font-size: 21px; img { width: 24px; }}
+            &-list-info {
+                &:not(:last-child) 
+                .eduwork__experience-list-info-content::before {
+                    left: -26.5px;
+                    top: 18px;
+                    height: calc(100% + 52px);
+                }
+                .circle {
+                    height: 8px;
+                    width: 8px;
+                }
+                &-period { width: 105px; font-size: 16px; }
+                &-content {
+                    width: calc(100% - 160px);
+                    &-title { font-size: 18px; }
+                    &-degree, &-text { font-size: 14px; }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .eduwork {
+        margin-top: 60px;
+        &__experience-list-info-period {
+            width: 100px;
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .eduwork {
+        &__experience {
+            &-title-name { font-size: 19px; img {width: 21px;} }
+            &-list-info {
+                &:not(:last-child) 
+                    .eduwork__experience-list-info-content::before {
+                        top: 14px;
+                    }
+                &-period {
+                    width: 76px;
+                    font-size: 12px;
+                }
+                &-content {
+                    width: calc(100% - 128px);
+                    &-title { font-size: 14px; }
+                    &-degree, &-text { font-size: 12px; }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .eduwork {
+        &__experience-list-info {
+            &-period {
+                width: 63px;
+                font-size: 10px;
+            }
+            &-content {
+                width: calc(100% - 114px);
+            }
+        }
+    }
+}

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Banner, LicensesList } from '../components';
+import { licenses } from '../data/utils';
+
+import '../styles/licenses.css';
 
 const Licenses = () => {
   return (
     <div>
-      Licenses
+      <Banner title="Licenses" backtohome />
+      <LicensesList licenses={licenses}/>
     </div>
   )
 }

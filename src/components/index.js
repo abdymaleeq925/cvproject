@@ -9,4 +9,8 @@ export { default as ProjectSummary } from './ProjectSummary';
 export { default as TeamMembers} from './TeamMembers';
 export { default as ResearchInsights } from './ResearchInsights';
 export { default as Design } from './Design'; 
+export { default as AboutMeBanner } from './AboutMeBanner';
+export { default as EduWork } from './EduWork'; 
+export { default as Featledge } from './Featledge';
+export { default as LicensesList } from './LicensesList';
 export { default as Footer } from './Footer';

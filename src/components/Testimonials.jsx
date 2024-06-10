@@ -1,6 +1,6 @@
 import React from 'react';
 
-import sign from '../icons/“.png';
+import sign from '../icons/commentsign.png';
 import '../styles/testimonials.css';
 
 const Testimonials = ({recommendations}) => {
@@ -14,8 +14,8 @@ const Testimonials = ({recommendations}) => {
                 </div>
                 <div className="testimonials__list">
                     {
-                        recommendations?.map(recommend => (
-                            <div className="testimonials__list-item">
+                        recommendations?.map((recommend, index) => (
+                            <div key={index} className="testimonials__list-item">
                                 <div className="testimonials__list-item-heading">
                                     <div className="testimonials__list-item-heading-img">
                                         <img src={recommend.authorProfile} alt="icon"/>

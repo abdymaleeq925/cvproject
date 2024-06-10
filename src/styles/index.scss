@@ -21,6 +21,24 @@
     margin-bottom: $mb;
 }
 
+@keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 :root {
     --textblue: #242F65;
     --textgray: #D9DFF2;
@@ -122,5 +140,67 @@ img { max-width: 100%; }
             text-transform: uppercase;
             letter-spacing: 10px;
         }
+    }
+}
+
+.rot {
+    animation: 1s linear 0s normal none infinite running rot;
+    -webkit-animation: 8s linear 0s normal none infinite running rot;
+    width: 150px;
+}
+
+@media screen and (max-width: 1024px) {
+    .titles {
+        margin-top: 63px;
+        &__wrapper { gap: 20px; }
+        &__leftline, &__rightline { height: 30px; }
+        &__name {
+            img {width: 20px;}
+            &-text {font-size: 16px; letter-spacing: 8px;}
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .titles {
+        margin: 50px 0;
+        &__wrapper { gap: 15px; }
+        &__leftline, &__rightline { height: 24px; }
+        &__name {
+            img {width: 17px;}
+            &-text {font-size: 14px; letter-spacing: 8px;}
+        }
+    }
+    .container, .container-xl {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 559px) {
+    .titles {
+        &__wrapper { gap: 10px; }
+        &__name {
+            gap: 8px;
+            &-text {letter-spacing: 4px;}
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .titles {
+        &__wrapper { gap: 10px; }
+        &__leftline, &__rightline { height: 20px; }
+        &__name {
+            img {width: 14px;}
+            &-text {font-size: 12px; letter-spacing: 4px;}
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .titles {
+        margin: 40px 0;
+        &__wrapper { gap: 8px; }
+        &__name-text { font-size: 11px; letter-spacing: 2px; }
     }
 }
