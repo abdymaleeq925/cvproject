@@ -2,10 +2,13 @@ import React, { useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import './styles/index.css';
+// import './swipe.js';
 import { Home, AboutMe, Project, Licenses, NotFound } from './pages';
 import { Header, Footer } from './components';
+
 function App() {
   const scrollUpRef = useRef();
+
   return (
     <div className="App">
       <Header scrollUpRef={scrollUpRef}/>

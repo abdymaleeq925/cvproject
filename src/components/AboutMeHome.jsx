@@ -3,7 +3,7 @@ import React from 'react';
 import { Titles } from '.';
 
 
-import MyCV from "../files/CV_tr.pdf";
+import MyCV from "../files/CV_en.pdf";
 import button from '../img/Button.svg';
 import image301 from '../icons/image301.svg';
 import '../styles/aboutMeHome.css';
@@ -20,7 +20,7 @@ const AboutMeHome = ({text, image}) => {
                     <img src={image} alt="profile" className="about-me-home__img"/>
                   </div>
                   <div className="about-me-home__resume">
-                      <a href={MyCV} download="CV_tr.pdf" className="img about-me-home__btn"><img src={button} alt="button-resume"/></a>
+                      <a href={MyCV} download="CV_en.pdf" className="img about-me-home__btn"><img src={button} alt="button-resume"/></a>
                   </div>
               </div>
           </div>

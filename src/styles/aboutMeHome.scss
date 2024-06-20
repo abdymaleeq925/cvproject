@@ -52,11 +52,7 @@
         background-color: transparent;
     }
 }
-@media screen and (max-width: 1439px) {
-    .about-me-home {
-        &__btn { width: 160px; bottom: -24%; right: 7%;}
-    }
-}
+
 @media screen and (max-width: 1199px) {
     .about-me-home {
         padding-bottom: 140px;

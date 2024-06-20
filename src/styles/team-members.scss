@@ -25,7 +25,7 @@
         gap: 50px;
         text-align: center;
         &-person {
-            &-img { border-radius: 100%; }
+            &-img { width: 40px; border-radius: 100%; }
             &-name { @include text($font-size: 20px, $font-weight: 350); margin: 11px 0 7px 0;}
             &-position { @include text($font-family: Mulish, $line-height: 128.5%, $color: #525665); margin: 0;}
         }

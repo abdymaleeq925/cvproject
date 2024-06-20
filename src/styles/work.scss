@@ -15,21 +15,19 @@
         display: flex;
         padding: 73px 106px;
         justify-content: space-between;
-        background-color: #eef0f9;
         &:last-child {
             margin-bottom: 0;
         }
         .pattern {
             position: absolute;
             z-index: 1;
-            background-color: #D9DFF2; 
         }
         &-pattern-1 {
             width: 314px;
             height: 314px;
             border-radius: 100%;
-            top: -44%;
-            left: -11%;
+            top: -49%;
+            left: -12%;
         }
         &-pattern-2 {
             width: 1300px;
@@ -41,7 +39,7 @@
         &-info {
             width: calc(50% - 57px);
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 25px;
             &-title {
                 @include text($font-family: Fraunces, $font-size: 40px, $font-weight: 600, $line-height: 110%);
@@ -51,17 +49,17 @@
                 gap: 15px;
             }
             &-tag {
-                @include text($font-size: 18px, $font-weight: 600, $color: #6878AC);
+                @include text($font-size: 18px, $font-weight: 600);
                 border-radius: 10px;
                 border: none;
                 padding: 11px 20px;
-                background-color: #D9DEEE ;
             }
             &-text {
                 @include text($font-family: Mulish, $line-height: 100%, $color: #525665);
             }
             &-btn {
                 padding: 19px 38px;
+                width: 260px;
                 border-radius: 10px;
                 @include text($font-family: Mulish, $font-weight: 700, $color: #fff);
                 border: none;
@@ -72,18 +70,93 @@
         &-illustration {
             position: relative;
             width: calc(50% - 57px);
+            height: 266px;
             &-img1 {
                 position: absolute;
                 z-index: 1;
-                top: -21%;
-                left: 0;
+                top: -17%;
+                left: -21%;
             }
             &-img2 {
                 position: absolute;
                 z-index: 2;
-                top: 0;
-                left: 16%;
+                max-width: 117%;
+                top: 31%;
+                left: 3%;
+                border-radius: 10px;
             }
+        }
+    }
+    .color1 {
+        background-color: #edf0f9;
+        .work__project {
+            &-info-tag {
+                color: #6878AC;
+                background-color: #D9DEEE;
+            }
+        }
+        .pattern {
+            background-color: #D9DFF2; 
+        }
+    }
+    .color2 {
+        background-color: #EAEAEA;
+        .work__project {
+            &-info-tag {
+                color: #525665;
+                background-color: #DFDFDF;
+            }
+        }
+        .pattern {
+            background-color: #E3E3E3; 
+        }
+    }
+    .color3 {
+        background-color: #ABEBFF;
+        .work__project {
+            &-info-tag {
+                color: #5AB5D1;
+                background-color: #FFF;
+            }
+        }
+        .pattern {
+            background-color: #FFC9DC; 
+        }
+    }
+    .color4 {
+        background-color: #FFF3E9;
+        .work__project {
+            &-info-tag {
+                color: #AE7E56;
+                background-color: #ECCFB8;
+            }
+        }
+        .pattern {
+            background-color: #F4E5D8; 
+        }
+    }
+    .color5 {
+        background-color: #E4FCF3;
+        .work__project {
+            &-info-tag {
+                color: #257e5c;
+                background-color: #24b980;
+            }
+        }
+        .pattern {
+            background-color: #94ebca; 
+        }
+    }
+    .color6 {
+        background-color: #F1CBEE;
+        .work__project {
+            &-info-tag {
+                color: #ffe8fd;
+                background-color: #cc70c4;
+            }
+        }
+        .pattern {
+            background-color: #d8a4d4; 
         }
     }
 }
@@ -91,7 +164,7 @@
 @media screen and (max-width: 1199px) {
     .work {
         &__project{
-            &-pattern-1 { top: -47%; }
+            &-pattern-1 { top: -55%; }
             &-pattern-2 { right: -113%; }
             &-illustration-img1 { top: -16%; }
             &-illustration-img2 { top: 16%; }   
@@ -110,9 +183,9 @@
         &__project {
             margin-bottom: 100px;
             padding: 60px;
-            &-pattern-1 { top: -63%; left: -20%; }
+            &-pattern-1 { top: -60%; left: -18%; }
             &-pattern-2 { right: -150%; }
-            &-illustration-img1 { top: -1%; }
+            &-illustration-img1 { top: -1%; left: -14%;}
             &-illustration-img2 { top: 27%; }
             &-info {
                 width: 50%;
@@ -120,7 +193,7 @@
                 &-title { font-size: 26px; }
                 &-tag { font-size: 16px; padding: 11px 15px; }
                 &-text { font-size: 16px; }
-                &-btn { padding: 16px 24px; font-size: 16px; }
+                &-btn { width: 196px; padding: 16px 24px; font-size: 16px; }
             }
         }
     }

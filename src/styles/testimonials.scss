@@ -41,7 +41,7 @@
                 }
             }
             &-content {
-                @include wrapper($gap: 20px);
+                @include wrapper($justify: none, $gap: 20px);
                 &-img { padding: 25px 20px; img { height: auto; width: 46px; max-width: none;}} 
                 &-info-text {
                     @include text($font-size: 22px, $font-weight: 400, $line-height: 146.5%, $color: #525665);

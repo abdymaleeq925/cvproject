@@ -1,10 +1,13 @@
 import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-import pattern from '../icons/Pattern.svg';
-import pattern1 from '../icons/Pattern-1.svg';
-import scrollbutton from '../icons/ScrollButton.svg';
-import arrowup from '../icons/arrowup.svg';
+import pattern from '../icons/Patternn.svg';
+import pattern1 from '../icons/Pattern-1n.svg';
+import scrollbutton from '../icons/ScrollButtonNight.svg';
+import arrowup from '../icons/VectorNight.svg';
+import arrowupblack from '../icons/arrowup.svg';
+import scrollbuttonblack from '../icons/ScrollButton.svg';
 import image1186 from '../icons/image1186.png';
 import image307 from '../icons/image307.png';
 import icon1 from '../icons/Icon1.svg';
@@ -15,20 +18,23 @@ const Footer = forwardRef(({scrollUpRef}, ref) => {
     e.preventDefault();
     scrollUpRef.current.scrollIntoView({behavior: "smooth"});
   };
+  
+  const link = useLocation();
   return (
     <>
-      <footer className="footer">
+      <footer className={link.pathname === '/' ? "footer light" : "footer"}>
         <div className="circle-1"></div>
         <div className="circle-2"></div>
         <div className="circle-3"></div>
+        <div className="circle-4"></div>
         <img className="line-1" src={pattern} alt="" />
         <img className="line-2" src={pattern1} alt="" />
         <div className="footer__wrapper">
           <div className="footer__top">
               <div className="footer__top__wrapper">
                 <button className="footer__top-getintouch-btn" ref={ref} onClick={scrollUp}>
-                  <img className="rot" src={scrollbutton} alt="button"/>
-                  <img className="arrowup" src={arrowup} alt="arrowup"/>
+                  <img className="rot" src={link.pathname === '/' ? scrollbuttonblack : scrollbutton} alt="button"/>
+                  <img className="arrowup" src={link.pathname === '/' ? arrowupblack : arrowup} alt="arrowup"/>
                 </button>
                 <div className="footer__top-text">
                   <span>Work<img className='monitor' src={image1186} alt="icon" />Get In Touch<img src={image307} alt="icon"/>Available for Work<img className='monitor' src={image1186} alt="icon"/></span>

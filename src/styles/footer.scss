@@ -47,8 +47,25 @@
 .footer {
     margin-top: 120px;
     position: relative;
-    background: #F4EDF8;
+    background: #2A2C32;;
     overflow: hidden;
+    &.light {
+        background: #F4EDF8;
+        .circle-1 { background-color: #D5D4FF; }
+        .circle-2 { background-color: #FFD2DD; }
+        .circle-3 { background-color: #FFD2E6; }
+        .circle-4 { background-color: #FFD2E6; display: none; }
+        &::before { background-color: #D092BA;}
+    
+        .footer__top-text {
+            color: var(--textblue);
+        }
+        .footer__bottom-cta {
+            li a {
+                color: var(--textblue);
+            }
+        }
+    }
     &::before {
         content: "";
         position: absolute;
@@ -57,13 +74,13 @@
         display: block;
         width: 100%;
         height: 1px;
-        background-color: #D092BA;
+        background-color: rgba(208, 146, 186, .5);
     }
-    .circle-1, .circle-2, .circle-3, .line-1, .line-2 { position: absolute; z-index: 0; }
+    .circle-1, .circle-2, .circle-3, .circle-4, .line-1, .line-2 { position: absolute; z-index: 0; }
     .circle-1 {
         width: 585px;
         height: 585px;
-        background-color: #D5D4FF;
+        background-color: #3D198B;
         border-radius: 100%;
         filter: blur(200px);
         top: 19%;
@@ -72,7 +89,7 @@
     .circle-2 {
         width: 641px;
         height: 563px;
-        background-color: #FFD2DD;
+        background-color: #35479D;
         border-radius: 100%;
         filter: blur(200px);
         top: 14%;
@@ -81,10 +98,18 @@
     .circle-3 {
         width: 112px;
         height: 112px;
-        background-color: #FFD2E6;
+        background-color: #374897;
         border-radius: 100%;
         top: 22%;
         left: 26%;
+    }
+    .circle-4 {
+        width: 112px;
+        height: 112px;
+        background-color: #702F77;
+        border-radius: 100%;
+        bottom: 37%;
+        right: 31%;
     }
     .line-1 {
         top: 14%;
@@ -92,7 +117,7 @@
     }
     .line-2 {
         width: 18%;
-        bottom: 27%;
+        bottom: 31%;
         left: 0%;
     }
     &__wrapper {
@@ -112,7 +137,7 @@
             padding: 100px 0;
         }
         &-text {
-            @include text($font-family: Mulish, $font-size: 50px);
+            @include text($font-family: Mulish, $font-size: 50px, $color: #fff);
             display: block;
             width: 100%;
             white-space: nowrap;
@@ -133,6 +158,7 @@
             border: none;
             .arrowup {
                 position: absolute;
+                color: #fff;
                 top: 50px;
                 left: 70px;
             }
@@ -156,7 +182,7 @@
                 cursor: pointer;
                 a {
                     text-decoration: none;
-                    @include text($line-height: 110%);
+                    @include text($line-height: 110%, $color: #fff);
                 }
             }
         }
@@ -186,6 +212,7 @@
         }
     }
 }
+
 
 @media screen and (max-width: 1439px) {
     .footer{

@@ -9,8 +9,8 @@ const LicensesList = ({licenses}) => {
             <div className="container">
                 <div className="licenses__wrapper">
                     {
-                        licenses?.map(license => (
-                            <div className="licenses__item">
+                        licenses?.map((license,index) => (
+                            <div className="licenses__item" key={index}>
                                 <div className="licenses__item-name">
                                     <h4 className="licenses__item-name-title">{license.categoryTitle}</h4>
                                 </div>

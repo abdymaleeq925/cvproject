@@ -14,7 +14,7 @@ import testimonialslogo from '../icons/testimonials.svg';
 
 const Home = () => {
   const scrollDownRef = useRef();
-
+  
   return (
     <>
       <Banner title="Hi, I am Abdymalik!" text="graduate with a few showcase projects" boldText="JS FullStack" buttonScroll scrollDownRef={scrollDownRef}/>

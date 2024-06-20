@@ -6,6 +6,12 @@ import '../styles/work.css';
 
 
 const Work = ({ projects, scrollDownRef }) => {
+
+  const colorClass = ['color1', 'color2', 'color3', 'color4', 'color5', 'color6'];
+  const getRandomColor = () => {
+      return colorClass[Math.floor(Math.random() * colorClass.length)];
+  }
+
   return (
     <div>
       <section ref={scrollDownRef} className="work">
@@ -13,7 +19,7 @@ const Work = ({ projects, scrollDownRef }) => {
             <div className="work__wrapper">
                 {
                   projects?.map((project, index) => (
-                    <div key={index} className="work__project">
+                    <div key={index} className={`work__project ${getRandomColor()}`}>
                         <div className="work__project-pattern-1 pattern"></div>
                         <div className="work__project-pattern-2 pattern"></div>
                         <div className="work__project-info">

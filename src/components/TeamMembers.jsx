@@ -5,17 +5,17 @@ import '../styles/team-members.css';
 const TeamMembers = ({members}) => {
   return (
     <div>
-        <section class="team">
-            <div class="container">
-                <div class="team__wrapper">
-                    <h2 class="team__title">Team Members</h2>
-                    <div class="team__members">
+        {members && (
+            <section className="team">
+            <div className="container">
+                <div className="team__wrapper">
+                    <h2 className="team__title">Tools</h2>
+                    <div className="team__members">
                         {
-                            members?.map(member => (
-                                <div className="team__members-person">
-                                    <img src={member.photo} alt="profile" class="team__members-person-img"/>
-                                    <p class="team__members-person-name">{member.name}</p>
-                                    <p class="team__members-person-position">{member.position}</p>
+                            members?.map((member,index) => (
+                                <div className="team__members-person" key={index}>
+                                    <img src={member.photo} alt="profile" className="team__members-person-img"/>
+                                    <p className="team__members-person-name">{member.name}</p>
                                 </div>
                             ))
                         }
@@ -23,6 +23,7 @@ const TeamMembers = ({members}) => {
                 </div>
             </div>
         </section>
+        )}
     </div>
   )
 }

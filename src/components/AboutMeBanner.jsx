@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import MyCV from "../files/CV_tr.pdf";
+import MyCV from "../files/CV_en.pdf";
 import aboutmephoto from '../img/profilepicture.jpeg';
 import hornsign from '../icons/Sign of the Horns.svg';
 
@@ -25,7 +25,7 @@ const AboutMeBanner = () => {
                             I love words that start with P: people, process, problem solving, progress, patience, programming, practice. I believe that synergy of these factors approach to desired results and provide stability. Beside work, I keen on football and reading. I can keep up diverse conversations and give feedback.</p>
                         </div>
                         <div className="about-me-banner__content-btns">
-                            <a href={MyCV} download="CV_tr.pdf" className="btn btn-black">Resume</a>
+                            <a href={MyCV} download="CV_en.pdf" className="btn btn-black">Resume</a>
                             <Link to="https://www.linkedin.com/in/abdymalik-batyrkulov" className="btn">LinkedIn</Link>
                             <Link to="https://www.instagram.com/nvintufviv" className="btn">Instagram</Link>
                             <Link to="https://github.com/abdymaleeq925" className="btn">GitHub</Link>
