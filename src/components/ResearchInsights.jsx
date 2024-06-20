@@ -21,10 +21,18 @@ const ResearchInsights = ({ projects }) => {
                         className='swipe_wrap'
                         modules={[Navigation]}
                         spaceBetween={50}
-                        slidesPerView={3}
                         navigation
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}>
+                        breakpoints={{
+                            320 : {
+                                slidesPerView: 1,
+                            },
+                            580 : {
+                                slidesPerView: 2,
+                            },
+                            1024 : {
+                                slidesPerView: 3,
+                            },
+                        }}>
                         {
                             projects && projects?.map((insight, index) => (
                                 slug !== insight.projectSlug &&

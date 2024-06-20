@@ -9,7 +9,7 @@ const Featledge = ({featledge}) => {
     <div className="container">
         <div className="featledge">
             <div className="featledge__feature">
-                <h3 className="featledge__feature-title"><img src={featicon} alt="pin"/>Features</h3>
+                <h3 className="featledge__feature-title"><img src={featicon} alt="pin"/>Soft Skills</h3>
                 <ul>
                     {
                         featledge?.features?.map((feat, index) => (
@@ -20,7 +20,7 @@ const Featledge = ({featledge}) => {
             </div>
             <hr/>
             <div className="featledge__knowledge">
-                <h3 className="featledge__knowledge-title"><img src={knowicon} alt="hat"/>Knowledge</h3>
+                <h3 className="featledge__knowledge-title"><img src={knowicon} alt="hat"/>Hard Skills</h3>
                 <ul>
                     {
                         featledge?.knowledge?.map((know, index) => (

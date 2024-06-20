@@ -168,8 +168,8 @@ export const projects = [
       bannerImage1 : bannerimage22,
       bannerImage2 : bannerimage21,
       projectSlug : "telegrambots",
-      bannerImage3 : bannerimage23,
-      bannerImage4 : bannerimage22,
+      bannerImage3 : bannerimage21,
+      bannerImage4 : bannerimage23,
       projectSummaryText : "Telegram bots with AI that takes information from outsource and exchange your money.",
       projectSummaryTags :  ["JavaScript", "REST API"],
       projectSummaryItemObj : [ 
@@ -208,13 +208,13 @@ export const services = [
   {
     icon: teammemberphoto3,
     title : "Redux",
-    text : "Redux is a small library with a simple, limited API designed to be a predictable container for application state. It operates in a fashion similar to a reducing function, a functional programming concept.",
+    text : "Redux is a small library with a simple, limited API designed to be a predictable container for application state.",
     fieldText : ["React", "JavaScript"]
   },
   {
     icon: servicesimage4,
     title : "API",
-    text : "REST APIs are an industry-standard way for web services to send and receive data. They use HTTP request methods to facilitate the request-response cycle and typically transfer data using JSON, and more rarely - HTML, XML and other formats.",
+    text : "REST APIs are an industry-standard way for web services to send and receive data.",
     fieldText : ["JavaScript"]
   }
 ]
@@ -288,7 +288,7 @@ export const eduwork = {
 }
 
 export const featledge = {
-  features : ["Ux Design Weekly Issue 354", "Bestfolios 2021", "Jacobs Institute for Design Innovation", "Uc Berkley Arts + Design 'Made at Berkley' 2019 Issue"],
+  features : ["Hard and patient worker", "Punctual", "Team worker"],
   knowledge : ["JavaScript", "Python, Django(elementary level)", "React", "NodeJS", "HTML/CSS", "Telegram BOT"]
 }
 

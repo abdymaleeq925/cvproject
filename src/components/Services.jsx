@@ -17,10 +17,19 @@ const Services = ({items}) => {
                 <Swiper className="services__list"
                     modules={[Navigation]}
                     spaceBetween={50}
-                    slidesPerView={3}
                     navigation
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}>
+                    breakpoints={{
+                        320 : {
+                            slidesPerView: 1,
+                        },
+                        580 : {
+                            slidesPerView: 2,
+                        },
+                        1024 : {
+                            slidesPerView: 3,
+                        },
+                    }}
+                    >
                     {
                         items?.map((item, index) => (
                             <SwiperSlide key={index} className="services__list-item">

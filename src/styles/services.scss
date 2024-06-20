@@ -86,7 +86,7 @@
             &-heading {
                 display: flex;
                 align-items: center;
-                gap: 15px;
+                gap: 10px;
                 img { width: 35px; margin-bottom: 0;}
                 &-title { font-size: 27px; }
             }
@@ -97,6 +97,7 @@
 
 @media screen and (max-width: 767px) {
     .services {
+        background: none;
         &__list-item {
             padding: 27px;
             &-heading {

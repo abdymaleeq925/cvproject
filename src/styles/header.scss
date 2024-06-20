@@ -16,6 +16,8 @@
     margin-bottom: $mb;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap');
+
 .header {
     &.fixed {
         position: fixed;
@@ -44,6 +46,7 @@
     }
     &__logo {
         display: flex;
+        align-items: center;
         gap: 10px;
         text-decoration: none;
         &-text {
@@ -92,6 +95,7 @@
             }
             .burger__logo {
                 display: flex;
+                align-items: center;
                 gap: 10px;
                 text-decoration: none;
                 &-icon { width: 22px; }
@@ -146,16 +150,22 @@
             }
         }
     }
+    .logo {
+        font-family: Playwrite MX;
+        color: var(--textblue);
+        font-size: 25px;
+        font-weight: bold;
+    }
 }
 
 @media screen and (max-width: 1024px) {
     .header {
         &__wrapper { margin-top: 25px; }
         &__logo {
-            .logo { width: 26px; }
             &-text { font-size: 26px; }
         }
         &__navlink-text { font-size: 17px; }
+        .logo { font-size: 20px; }
     }
 }
 
@@ -173,7 +183,6 @@
 @media screen and (max-width: 559px) {
     .header {
         &__logo {
-            .logo { width: 22px; }
             &-text { font-size: 22px; }
         }
         &__cta {
@@ -194,13 +203,13 @@
                 }
             }
         }
+        .logo { font-size: 16px; }
     }
 }
 
 @media screen and (max-width: 480px) {
     .header {
         &__logo {
-            .logo { width: 20px; }
             &-text { font-size: 20px; }
         }
         &__cta {
@@ -217,6 +226,7 @@
                 }
             }
         }
+        .logo { font-size: 13px; }
     }
 }
 

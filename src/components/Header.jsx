@@ -5,7 +5,6 @@ import { LuGithub } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 
-import logo from '../icons/header_logo.svg';
 import '../styles/header.css';
 
 function Header({scrollUpRef}) {
@@ -17,7 +16,7 @@ function Header({scrollUpRef}) {
         <div className="container-xl">
             <div className="header__wrapper">
                 <Link to="/" className="header__logo">
-                    <img className="logo" src={logo} alt="logo"/>
+                    <p className="logo">CV</p>
                     <p className="header__logo-text">Curriculum Vitae</p>
                 </Link>
                 <div className="header__navlink">
@@ -28,13 +27,13 @@ function Header({scrollUpRef}) {
                 <div className="header__cta">
                     <nav className={burgerClick ? "header__cta-burger-menu show-menu" : "header__cta-burger-menu"}>
                         <div className="burger__logo">
-                            <img className="burger__logo-icon" src={logo} alt="logo"/>
+                            <p className="logo">CV</p>
                             <p className="burger__logo-title">Curriculum Vitae</p>
                         </div>
                         <ul className="header__cta-burger-menu-links">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about-me">About Me</Link></li>
-                            <li><Link to="/licenses">Licenses</Link></li>
+                            <li><Link to="/" onClick={() => setBurgerClick(!burgerClick)}>Home</Link></li>
+                            <li><Link to="/about-me" onClick={() => setBurgerClick(!burgerClick)}>About Me</Link></li>
+                            <li><Link to="/licenses" onClick={() => setBurgerClick(!burgerClick)}>Licenses</Link></li>
                         </ul>
                         <div className="social-media-icons">
                             <Link to="https://www.linkedin.com/in/abdymalik-batyrkulov"><FaLinkedin fill="#242F65" size="24"/></Link>

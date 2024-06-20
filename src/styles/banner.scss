@@ -72,7 +72,7 @@
                 width: 80%;
             }
             &-image-2 {
-                width: 600px;
+                width: 35%;
                 position: absolute;
                 z-index: 1;
                 bottom: 0%;
@@ -110,9 +110,8 @@
 @media screen and (max-width: 1024px) {
     .banner {
         &__top {
-            padding: 50px 0;
             &-info {
-                &-name { font-size: 44px; line-height: 60px;}
+                &-name { font-size: 44px; line-height: 60px; img{display: none;}}
                 &-text { font-size: 20px; line-height: 36px; margin-bottom: 35px;}
                 &-scroll_down {
                     width: 80px;
@@ -143,19 +142,9 @@
     .banner {
         margin-top: 3em;
         &__top {
-            padding: 30px 0;
             &-info {
-                width: 80%;
-                &-name { font-size: 32px; line-height: 35px;}
-                &-text { font-size: 16px; line-height: 26px; margin-bottom: 18px;}
-                &-scroll_down {
-                    width: 56px;
-                    .arrowdown {
-                        width: 8px;
-                        top: 15px;
-                        left: 24px;
-                    }
-                }
+                &-name { line-height: 35px;}
+                &-text { line-height: 26px; margin-bottom: 18px;}
             }
         }
         &__btn {
@@ -182,17 +171,10 @@
     .banner {
         margin-top: 2em;
         &__top {
+            padding: 20px 0;
             &-info {
-                &-name { font-size: 26px; line-height: 24px; }
-                &-text { font-size: 12px; line-height: 20px; }
-                &-scroll_down {
-                    width: 42px;
-                    .arrowdown {
-                        width: 6px;
-                        top: 10px;
-                        left: 18px;
-                    }
-                }
+                &-name { font-size: 36px; line-height: 24px; }
+                &-text { line-height: 20px; }
             }
         }
         &__btn {
@@ -219,11 +201,19 @@
     .banner {
         margin-top: 1em;
         &__top {
-            padding: 20px 0;
             &-info {
-                &-name { font-size: 20px; line-height: 23px; margin-bottom: 12px; }
-                &-text { font-size: 9px; line-height: 14px; margin-bottom: 12px;}
+                &-name { font-size: 30px; }
+                &-text { font-size: 16px; }
             }
+            &-scroll_down {
+                width: 70px;
+                .arrowdown {
+                    width: 12px;
+                    top: 16px;
+                    left: 29px;
+                }
+            }
+
         }
         &__bottom {
             margin-top: 60px;
