@@ -46,7 +46,6 @@ const Footer = forwardRef(({scrollUpRef}, ref) => {
               <div className="footer__bottom__wrapper">
                 <div className="footer__bottom-socials">
                   <ul className="footer__bottom-cta">
-                    <li><Link to="/licenses">Licenses</Link></li>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about-me">Me</Link></li>
                     <li><Link to="https://www.linkedin.com/in/abdymalik-batyrkulov">LinkedIn</Link></li>

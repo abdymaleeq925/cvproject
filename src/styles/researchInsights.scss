@@ -31,8 +31,6 @@
             &-img { width: calc(50% - 21px); }
         }
         &-item {
-            // display: flex;
-            // flex-direction: column;
             padding: 40px 30px;
             border: solid 1px #D8D8D8;
             border-radius: 10px;
@@ -65,7 +63,6 @@
         &__insights {
             gap: 20px;
             &-item {
-                width: 33.33%;
                 &-title { font-size: 20px; }
                 &-text { font-size: 16px; }
             }
@@ -76,30 +73,20 @@
 @media screen and (max-width: 767px) {
     .research {
         margin-top: 80px;
-        &__insights {
-            flex-wrap: wrap;
-            &-item {
-                width: 48%;
-            }
-        }
     }
 }
 
 @media screen and (max-width: 559px) {
     .research {
-        
         &__insights {
             justify-content: center;
             flex-wrap: wrap;
-            &-item {
-                width: 80%;
-            }
-            &-picture {
-                flex-direction: column;
-                align-items: center;
-                &-img {
+            &-item-img {
+                // flex-direction: column;
+                // align-items: center;
+         
                     width: 80%;
-                }
+            
             }
         }
     }
@@ -108,8 +95,5 @@
 @media screen and (max-width: 374px) {
     .research {
         margin-top: 70px;
-        &__insights-item {
-            width: 90%;
-        }
     }
 }

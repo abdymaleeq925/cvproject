@@ -22,7 +22,6 @@ function Header({scrollUpRef}) {
                 <div className="header__navlink">
                     <li><Link to="/"className="header__navlink-text">Home</Link></li>
                     <li><Link to="/about-me"className="header__navlink-text">About Me</Link></li>
-                    <li><Link to="/licenses"className="header__navlink-text">Licenses</Link></li>
                 </div>
                 <div className="header__cta">
                     <nav className={burgerClick ? "header__cta-burger-menu show-menu" : "header__cta-burger-menu"}>
@@ -33,7 +32,6 @@ function Header({scrollUpRef}) {
                         <ul className="header__cta-burger-menu-links">
                             <li><Link to="/" onClick={() => setBurgerClick(!burgerClick)}>Home</Link></li>
                             <li><Link to="/about-me" onClick={() => setBurgerClick(!burgerClick)}>About Me</Link></li>
-                            <li><Link to="/licenses" onClick={() => setBurgerClick(!burgerClick)}>Licenses</Link></li>
                         </ul>
                         <div className="social-media-icons">
                             <Link to="https://www.linkedin.com/in/abdymalik-batyrkulov"><FaLinkedin fill="#242F65" size="24"/></Link>

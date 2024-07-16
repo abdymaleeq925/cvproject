@@ -222,21 +222,21 @@ export const services = [
 export const testimonials = [
   {
     authorProfile : authorprofile1,
-    authorName : "Rano",
+    authorName : "Rano Khassanova",
     authorPosition : "Curator",
-    text : "We worked with David designing our backend web app from scratch and we are delighted with the results. He has excellent communication skills and uses robust workflows that allowed me and my team to work with him efficiently."
+    text : "I teached Malik during his Bootcamp program and I am delighted with his results. He has excellent communication skills and uses robust workflows that allowed me to teach and work with him efficiently."
   },
   {
     authorProfile : authorprofile2,
     authorName : "Mark Zuckerberg",
-    authorPosition : "The Social Network CEO",
-    text : "We worked with David designing our backend web app from scratch and we are delighted with the results. He has excellent communication"
+    authorPosition : "The Facebook CEO",
+    text : "We had him as an intern in our company and all I can say about him is that he showed outstanding performance during the internship program. We would like to offer him position but he wanted to conribute his efforts in another place."
   },
   {
     authorProfile : authorprofile3,
     authorName : "Pavel Durov",
     authorPosition : "Telegram CEO",
-    text : "He still needs to learn how to use Redux,bruh..."
+    text : "He is the one who inspired me to create bot and to show the world another way to use my Telegram application."
   }
 ]
 
@@ -291,24 +291,3 @@ export const featledge = {
   features : ["Hard and patient worker", "Punctual", "Team worker"],
   knowledge : ["JavaScript", "Python, Django(elementary level)", "React", "NodeJS", "HTML/CSS", "Telegram BOT"]
 }
-
-export const licenses = [
-  {
-    categoryTitle : "Programming",
-    categoryText : "All images used in the Designerz Webflow Template are licensed for free personal and commercial use. If you'd like to use any specific image, you can check the licenses and download the images for free on Unsplash, Pexels.",
-    category : [
-      {
-        info : "JS FullStack",
-        text : "Image 1,  Image 2, Image 3, Image 4, Image 5, Image 6, Image 7, Image 8, Image 9, Image 10, Image 11, Image 12, Image 13, Image 14"
-      },
-      {
-        info : "Unsplash",
-        text : "Image 1,  Image 2, Image 3, Image 4"
-      },
-    ]
-  },
-  {
-    categoryTitle : "Font",
-    categoryText : "Designerz template uses free licensed Google Fonts. Please check Fraunces and Mulish."
-  },
-]

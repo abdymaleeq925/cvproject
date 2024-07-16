@@ -38,11 +38,11 @@ const ResearchInsights = ({ projects }) => {
                                 slug !== insight.projectSlug &&
                                     <SwiperSlide key={index}>
                                         <Link to={`/projects/${insight.projectSlug}`} className="research__insights-link">
-                                            <div className="research__insights-item">
+                                            {/* <div className="research__insights-item"> */}
                                                 <img src={insight.bannerImage2} alt="insight" className="research__insights-item-img"/>
                                                 <h4 className="research__insights-item-title">{insight.bannerTitle}</h4>
                                                 <p className="research__insights-item-text">{insight.bannerText}</p>
-                                            </div>
+                                            {/* </div> */}
                                         </Link>
                                     </SwiperSlide>
                             )) 

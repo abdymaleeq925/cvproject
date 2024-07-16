@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import './styles/index.css';
 // import './swipe.js';
-import { Home, AboutMe, Project, Licenses, NotFound } from './pages';
+import { Home, AboutMe, Project, NotFound } from './pages';
 import { Header, Footer } from './components';
 
 function App() {
@@ -17,7 +17,6 @@ function App() {
           <Route path='/*' element={<Home/>}/>
           <Route path='/about-me' element={<AboutMe/>}/>
           <Route path='/projects/:slug' element={<Project/>}/>
-          <Route path='/licenses' element={<Licenses/>}/>
           <Route path='/404-not-found' element={<NotFound/>}/>
         </Routes>
       </div>
