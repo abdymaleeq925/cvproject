@@ -271,6 +271,12 @@ export const eduwork = {
       eduworktitle : "Work Experience",
       eduworklist : [
         {
+          period : "July 2024 to Nov 2024",
+          place : "Dara Solutions",
+          degree : "Frontend Developer",
+          info : "Supporting, maintaining, adding features and fixing bugs according to business analytics comments."
+        },
+        {
           period : "2022 to 2024",
           place : "Turan Industrial",
           degree : "Translator, Shift boss",
