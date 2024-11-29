@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     burgerMenu.addEventListener('click', () => {
         navLink.classList.toggle('show-menu');
         burgerMenu.classList.toggle('close-burger');
-    })
+    });
 
     window.onscroll = function () {
         if (window.scrollY > 100) {
@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('fixed');
             arrowUp.classList.remove('scrollTop');
         }
-    }
+    };
 
     arrowUp.addEventListener('click', function () {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    })
-})
+    });
+});

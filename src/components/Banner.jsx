@@ -8,7 +8,7 @@ import arrowdown from '../icons/arrowdown.svg';
 
 import '../styles/banner.css';
 
-const Banner = forwardRef(({title, text, boldText, buttonScroll, backtohome, bannerImage, bannerImage2, scrollDownRef}, ref) => {
+const Banner = forwardRef(({ title, text, boldText, buttonScroll, backtohome, bannerImage, bannerImage2, scrollDownRef }, ref) => {
   const scrollDown = (e) => {
     e.preventDefault();
     scrollDownRef.current.scrollIntoView({behavior: "smooth"});
@@ -32,7 +32,6 @@ const Banner = forwardRef(({title, text, boldText, buttonScroll, backtohome, ban
                     <img className="rot" src={scrollbutton} alt="buttonimg"/>
                     <img className="arrowdown" src={arrowdown} alt="arrowdown" />
                   </button>
-                    
                 }
               </div>
               {

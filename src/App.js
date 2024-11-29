@@ -1,8 +1,6 @@
 import React, { useRef } from 'react'; 
 import { Routes, Route } from 'react-router-dom';
-
 import './styles/index.css';
-// import './swipe.js';
 import { Home, AboutMe, Project, NotFound } from './pages';
 import { Header, Footer } from './components';
 

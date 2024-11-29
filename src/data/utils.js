@@ -30,9 +30,8 @@ import servicesimage1 from '../icons/js-vgrepo-com.svg';
 import servicesimage2 from '../icons/nodejs-svgrepo-com.svg';
 import servicesimage3 from '../icons/react-16-svgrepo-com.svg';
 import servicesimage4 from '../icons/api-svgrepo-com.svg';
-import authorprofile1 from '../img/Image3.svg';
-import authorprofile2 from '../icons/profilepic.svg';
-import authorprofile3 from '../icons/profilepic2.svg';
+import authorprofile1 from '../img/Image3.png';
+import authorprofile2 from '../icons/profilepic.png';
 import edulogo from '../icons/books.svg';
 import worklogo from '../icons/image969.svg';
 
@@ -223,49 +222,19 @@ export const testimonials = [
   {
     authorProfile : authorprofile1,
     authorName : "Rano Khassanova",
-    authorPosition : "Curator",
+    authorPosition : "Curator at ITC Bootcamp",
     text : "I teached Malik during his Bootcamp program and I am delighted with his results. He has excellent communication skills and uses robust workflows that allowed me to teach and work with him efficiently."
   },
   {
     authorProfile : authorprofile2,
-    authorName : "Mark Zuckerberg",
-    authorPosition : "The Facebook CEO",
-    text : "We had him as an intern in our company and all I can say about him is that he showed outstanding performance during the internship program. We would like to offer him position but he wanted to conribute his efforts in another place."
-  },
-  {
-    authorProfile : authorprofile3,
-    authorName : "Pavel Durov",
-    authorPosition : "Telegram CEO",
-    text : "He is the one who inspired me to create bot and to show the world another way to use my Telegram application."
+    authorName : "Adilet Zhanysbay",
+    authorPosition : "Mentor at Dara Solutions",
+    text : "I was glad to had him as an intern in our company and all I can say about him is that he showed outstanding performance during the internship program. We would like to offer him position but he wanted to conribute his efforts in Istanbul."
   }
 ]
 
 export const eduwork = {
   eduwork : [
-    {
-      eduworkicon : edulogo,
-      eduworktitle : "Education",
-      eduworklist : [
-        {
-          period : "Feb to Jun, 2024",
-          place : "ITC BootCamp, Almaty",
-          degree : "JavaScript Fullstack Program",
-          info : "Program inculdes client and server software development using MERN bundle, mastering HTML/CSS on SASS/SCSS and Telegram Bot development."
-        },
-        {
-          period : "2012 to 2019",
-          place : "Istanbul Technical University",
-          degree : "Mining Engineering",
-          info : "Surface and underground mining that includes whole process starting with mining and ending with mineral processing."
-        },
-        {
-          period : "2007 to 2012",
-          place : "Ch. Aytmatov's Bishkek Kyrgyz Turkish High School",
-          degree : "General",
-          info : "Includes high-school program in English."
-        }
-      ]
-    },
     {
       eduworkicon : worklogo,
       eduworktitle : "Work Experience",
@@ -287,6 +256,30 @@ export const eduwork = {
           place : "AAEngineering Group",
           degree : "HSE Engineer",
           info : "Developing, installing, maintaining, configuring and upgrading OHS systems, assessing and reducing risks involved in the working systems, monitoring the performance of the OHS systems and implementing modifications"
+        }
+      ]
+    },
+    {
+      eduworkicon : edulogo,
+      eduworktitle : "Education",
+      eduworklist : [
+        {
+          period : "Feb to Jun, 2024",
+          place : "ITC BootCamp, Almaty",
+          degree : "JavaScript Fullstack Program",
+          info : "Program inculdes client and server software development using MERN bundle, mastering HTML/CSS on SASS/SCSS and Telegram Bot development."
+        },
+        {
+          period : "2012 to 2019",
+          place : "Istanbul Technical University",
+          degree : "Mining Engineering",
+          info : "Surface and underground mining that includes whole process starting with mining and ending with mineral processing."
+        },
+        {
+          period : "2007 to 2012",
+          place : "Ch. Aytmatov's Bishkek Kyrgyz Turkish High School",
+          degree : "General",
+          info : "Includes high-school program in English."
         }
       ]
     }

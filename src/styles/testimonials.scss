@@ -29,7 +29,7 @@
         margin-top: 60px;
         &-item {
             &-heading {
-                @include wrapper($justify: normal, $gap: 15.5px);
+                @include wrapper($justify: normal, $gap: 30px);
                 &-title-name {
                     @include text($font-size: 25px, $font-weight: 600, $line-height: 110%);
                     margin: 0;
@@ -55,7 +55,7 @@
                     &:before {
                         content: '';
                         position: absolute;
-                        width: 60%;
+                        width: 90%;
                         height: 1px;
                         background-color: #D0A798;
                         top: 50%;
