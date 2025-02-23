@@ -42,16 +42,20 @@
             @include text ($font-family: Fraunces, $font-size: 30px);
         }
         &-content {
+            
             padding: 52px 58px;
             background-color: #F5F5F5;
             border-radius: 20px;
             &-item {
+                display: flex;
+                align-items: center;
+                gap: 20px;
                 &:not(:last-child) {
                     margin-bottom: 24px;
                 }
                 &-heading { @include text ($font-family: Fraunces); }
                 &-name { @include text($line-height: 128.5%); margin-top: 5px;}
-                &-link { @include text($line-height: 128.5%); margin-top: 5px; text-decoration: underline;}
+                &-link { @include text($line-height: 128.5%); text-decoration: underline;}
             }
         }   
     }

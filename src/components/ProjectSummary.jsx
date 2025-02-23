@@ -1,53 +1,53 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import '../styles/project-summary.css';
+import "../styles/project-summary.css";
 
-const ProjectSummary = ({summaryText, summaryTags, itemObj}) => {
+const ProjectSummary = ({ summaryText, summaryTags, itemObj }) => {
   return (
     <div>
-        <section className="project-summary">
-            <div className="container">
-                <div className="project-summary__wrapper">
-                    <div className="project-summary__info">
-                        <h2 className="project-summary__info-title">Project Summary</h2>
-                        <p className="project-summary__info-text">{summaryText}</p>
-                        <div className="project-summary__info-tags">
-                            {
-                                summaryTags?.map((tag, index) => (
-                                    <div className="project-summary__info-tags-item" key={index}>{tag}</div>
-                                ))
-                            }
-                        </div>
-                    </div>
-                    <div className="project-summary__details">
-                        <h2 className="project-summary__details-title">Project Details</h2>
-                        <div className="project-summary__details-content">
-                            {
-                                itemObj?.map((item, index) => (
-                                    <div className="project-summary__details-content-item" key={index}>
-                                        <h4 className="project-summary__details-content-item-heading">{item.scope}: </h4>
-                                        {
-                                            item.scope === "Website" ? 
-                                            <Link to={item.link} className="project-summary__details-content-item-link">{item.name}</Link> : 
-                                            <p className="project-summary__details-content-item-name">{item.name}</p>
-                                        }
-                                        
-                                    </div>
-                                )) 
-                            }
-                            {/* <h4 className="h4">Duration: </h4>
-                            <p className="name">October - December 2022 (6 weeks)</p>
-                            
-                            <h4 className="h4">Tools: </h4>
-                            <p className="name">Figma, Illustration</p> */}
-                        </div>
-                    </div>
-                </div>
+      <section className="project-summary">
+        <div className="container">
+          <div className="project-summary__wrapper">
+            <div className="project-summary__info">
+              <h2 className="project-summary__info-title">Project Summary</h2>
+              <p className="project-summary__info-text">{summaryText}</p>
+              <div className="project-summary__info-tags">
+                {summaryTags?.map((tag, index) => (
+                  <div className="project-summary__info-tags-item" key={index}>
+                    {tag}
+                  </div>
+                ))}
+              </div>
             </div>
-        </section>
+            <div className="project-summary__details">
+              <h2 className="project-summary__details-title">
+                Project Details
+              </h2>
+              <div className="project-summary__details-content">
+                {itemObj?.map((item, index) => (
+                  <div
+                    className="project-summary__details-content-item"
+                    key={index}
+                  >
+                    <h4 className="project-summary__details-content-item-heading">
+                      {item.scope}:{" "}
+                    </h4>
+                    <Link
+                      to={item.link}
+                      className="project-summary__details-content-item-link"
+                    >
+                      {item.name}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectSummary
+export default ProjectSummary;

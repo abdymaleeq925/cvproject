@@ -39,18 +39,16 @@ export const projects = [
     {
       bannerTitle : "Brand Landing",
       bannerTags : ["HTML/CSS(SCSS)", "JavaScript"],
-      bannerText : "Brand Landing webpage for presenting the services and company facilitites. Webpage is made up by JavaScript and HTML/CSS(SCSS) with adoptation.",
+      bannerText : "A clean and responsive brand landing page built with pure HTML, CSS, and JavaScript. This project demonstrates a simple yet elegant design suitable for showcasing a product, service, or brand.",
       bannerImage1 : bannerimage1,
       bannerImage2 : bannerimage2,
       projectSlug : "brand-landing",
       bannerImage3 : bannerimage3,
       bannerImage4 : bannerimage4,
-      projectSummaryText : "Fance webpage with modals and external Swiper function. Mostly reinforced by adoptation.",
-      projectSummaryTags :  ["Service", "Landing", "JavaScript"],
+      projectSummaryText : "Optimized for all screen sizes, including desktops, tablets, and mobile devices. Includes JavaScript-powered interactions such as a swiper, accordeon and modal functions. Focus on clean and modern UI/UX design principles. Tested and functional on major browsers.",
+      projectSummaryTags :  ["Swiper", "Landing Adoption", "JavaScript"],
       projectSummaryItemObj : [ 
-        {scope : "Role", name : "Executor"},
-        {scope : "Duration", name : "3 weeks"},
-        {scope : "Website", name : "Visit webite", link : "https://github.com/abdymaleeq925/landing"}
+        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/landing"},
        ],
        teamMembers : [
         {photo : teammemberphoto1,
@@ -68,13 +66,11 @@ export const projects = [
       projectSlug : "the-blog",
       bannerImage3 : bannerimage5,
       bannerImage4 : bannerimage8,
-      projectSummaryText : "There is a fullstack website with an authorization and database on MongooDB. You can add posts.",
-      projectSummaryTags :  ["React", "MongooDB", "Javascript", "NodeJS"],
+      projectSummaryText : "Welcome to Blog Website, a modern, full-stack blogging platform built with JavaScript, React, MongoDB, Redux, and HTML/CSS. This platform allows users to create, edit, and delete posts, comment on posts, like posts, and even reply to comments. Whether you're a blogger or a reader, this platform has something for everyone!",
+      projectSummaryTags :  ["React", "MongoDB", "JavaScript", "NodeJS"],
       projectSummaryItemObj : [ 
-        {scope : "Role", name : "Executor"},
-        {scope : "Duration", name : "3 weeks"},
-        {scope : "Website", name : "Visit webite", link : "https://github.com/abdymaleeq925/blog"},
-        
+        {scope : "Website", name : "Visit website", link : "https://blog-frontend-4j7d.onrender.com"},
+        {scope : "GitHub", name : "Visit GitHub", link : "https://github.com/abdymaleeq925/blog"},
        ],
        teamMembers : [
         {photo : servicesimage3,
@@ -82,7 +78,7 @@ export const projects = [
         {photo : servicesimage2,
         name : "NodeJS"},
         {photo : teammemberphoto2,
-          name : "MongooDB"},
+          name : "MongoDB"},
         {photo : teammemberphoto3,
           name : "Redux"},
       ]
@@ -100,7 +96,7 @@ export const projects = [
       projectSummaryTags :  ["Cyrpto", "REST API"],
       projectSummaryItemObj : [ 
         {scope : "Duration", name : "3 weeks"},
-        {scope : "Website", name : "Visit webite", link : "https://github.com/abdymaleeq925/crypto-react"},
+        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/crypto-react"},
         {scope : "Tools", name : "React, REST API"}
        ],
       teamMembers : [
@@ -123,7 +119,7 @@ export const projects = [
       projectSummaryTags :  ["React", "Sanity", "HTML/CSS(SCSS)"],
       projectSummaryItemObj : [ 
         {scope : "Duration", name : "4 weeks"},
-        {scope : "Website", name : "Visit webite", link : "https://github.com/abdymaleeq925/binterest"},
+        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/binterest"},
         {scope : "Tools", name : "React, JavaScript"}
        ],
       teamMembers : [
@@ -148,7 +144,7 @@ export const projects = [
       projectSummaryTags :  ["React", "Sanity", "HTML/CSS(SCSS)"],
       projectSummaryItemObj : [ 
         {scope : "Duration", name : "3 weeks"},
-        {scope : "Website", name : "Visit webite", link : "https://github.com/abdymaleeq925/eshop"},
+        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/eshop"},
         {scope : "Tools", name : "React, JavaScript"}
        ],
       teamMembers : [
@@ -173,7 +169,7 @@ export const projects = [
       projectSummaryTags :  ["JavaScript", "REST API"],
       projectSummaryItemObj : [ 
         {scope : "Duration", name : "2 days"},
-        {scope : "Website", name : "Visit webite", link : "https://github.com/abdymaleeq925/currency_bot"},
+        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/currency_bot"},
         {scope : "Tools", name : "REST API, JavaScript"}
        ],
       teamMembers : [
