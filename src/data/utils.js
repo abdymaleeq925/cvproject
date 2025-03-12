@@ -30,6 +30,7 @@ import servicesimage1 from '../icons/js-vgrepo-com.svg';
 import servicesimage2 from '../icons/nodejs-svgrepo-com.svg';
 import servicesimage3 from '../icons/react-16-svgrepo-com.svg';
 import servicesimage4 from '../icons/api-svgrepo-com.svg';
+import servicesimage5 from '../icons/ant-design.svg'
 import authorprofile1 from '../img/Image3.png';
 import authorprofile2 from '../icons/profilepic.png';
 import edulogo from '../icons/books.svg';
@@ -60,7 +61,7 @@ export const projects = [
     {
       bannerTitle : "The Blog",
       bannerTags : ["React", "NodeJS", "Redux"],
-      bannerText : "Blog site with authorization, creating/editing posts and sekeltons.",
+      bannerText : "Blog site with authorization, creating/deleting posts, comments, likes, dislikes, and replies.",
       bannerImage1 : bannerimage7,
       bannerImage2 : bannerimage6,
       projectSlug : "the-blog",
@@ -69,7 +70,7 @@ export const projects = [
       projectSummaryText : "Welcome to Blog Website, a modern, full-stack blogging platform built with JavaScript, React, MongoDB, Redux, and HTML/CSS. This platform allows users to create, edit, and delete posts, comment on posts, like posts, and even reply to comments. Whether you're a blogger or a reader, this platform has something for everyone!",
       projectSummaryTags :  ["React", "MongoDB", "JavaScript", "NodeJS"],
       projectSummaryItemObj : [ 
-        {scope : "Website", name : "Visit website", link : "https://blog-frontend-4j7d.onrender.com"},
+        {scope : "Website", name : "Visit website", link : "https://blog-4wsh.onrender.com"},
         {scope : "GitHub", name : "Visit GitHub", link : "https://github.com/abdymaleeq925/blog"},
        ],
        teamMembers : [
@@ -85,25 +86,27 @@ export const projects = [
     },
     {
       bannerTitle : "Cryptotnt",
-      bannerTags : ["React", "REST API"],
-      bannerText : "Crypto site with crypto information, news, ranking and charts.",
+      bannerTags : ["React", "REST API", "ant-d"],
+      bannerText : "This project is a cryptocurrency-focused webpage that provides up-to-date information on top cryptocurrencies, the latest crypto news, and cryptocurrency price trends.",
       bannerImage1 : bannerimage10,
       bannerImage2 : bannerimage9,
       projectSlug : "crypto",
       bannerImage3 : bannerimage11,
       bannerImage4 : bannerimage12,
-      projectSummaryText : "Crypto webpage with full crypto information, news taken from API. It has search function and chart with period selection",
-      projectSummaryTags :  ["Cyrpto", "REST API"],
+      projectSummaryText : "This project is a cryptocurrency-focused webpage that provides up-to-date information on top cryptocurrencies, the latest crypto news, and cryptocurrency price trends. The data for news and cryptocurrency prices is fetched via a REST API using Express. The webpage also includes a news search function and a price chart with period selection.",
+      projectSummaryTags :  ["Rest Api", "React", "ant-d"],
       projectSummaryItemObj : [ 
-        {scope : "Duration", name : "3 weeks"},
-        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/crypto-react"},
-        {scope : "Tools", name : "React, REST API"}
+        {scope : "Website", name : "Visit website", link: "https://crypto-react-pi.vercel.app"},
+        {scope : "GitHub", name : "Visit GitHub", link : "https://github.com/abdymaleeq925/crypto-react"}
        ],
       teamMembers : [
         {photo : servicesimage3,
         name : "React"},
         {photo : servicesimage4,
-        name : "REST API"}
+        name : "REST API"},
+        {photo : servicesimage5,
+          name : "ant-d"},
+
       ]
     },
     {
