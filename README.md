@@ -1,44 +1,70 @@
-# Crypto Information Webpage
+# Getting Started with Create React App
 
-## Project Description
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project is a cryptocurrency-focused webpage that provides up-to-date information on top cryptocurrencies, the latest crypto news, and cryptocurrency price trends. The data for news and cryptocurrency prices is fetched via a REST API using Express. The webpage also includes a news search function and a price chart with period selection.
+## Available Scripts
 
-## Key Features
+In the project directory, you can run:
 
-- **Top Cryptocurrencies**: Displays a list of top cryptocurrencies with their current prices, 24-hour changes, and other relevant information.
-- **Crypto News**: Latest cryptocurrency news fetched via an API. Users can search for news using keywords.
-- **Price Chart**: An interactive price chart for cryptocurrencies with the ability to select different time periods (e.g., 1 day, 7 days, 1 month, etc.).
-- **News Search**: A search function allows users to find news articles by keywords or topics.
+### `npm start`
 
-## Technologies Used
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- **JavaScript**: The primary programming language for developing the webpage.
-- **React**: A library for building the user interface.
-- **Ant Design**: A UI library for creating modern and responsive interfaces.
-- **REST API**: Used to fetch cryptocurrency and news data.
-- **Express**: A Node.js framework used for the backend and handling API requests.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Installation and Setup
+### `npm test`
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/repository-name.git
-   cd repository-name
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-2. **Install dependencies**:
-    ```bash
-    npm install
+### `npm run build`
 
-3. **Start the server:**
-    ```bash
-    npm start
-4. **Open the webpage:**
-    Go to http://localhost:3000 in your browser.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Usage
-- **Homepage**: The homepage displays a list of top cryptocurrencies, the latest news, and a price chart.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- **News Search**: Enter a keyword in the search bar to find relevant news articles.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- **Price Chart**: Select a cryptocurrency and a time period to view its price chart.
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
