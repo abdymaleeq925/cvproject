@@ -10,7 +10,7 @@ const EduWork = ( {eduwork} ) => {
             <div className="container">
                 <div className="eduwork__wrapper">
                     {
-                        eduwork?.eduwork?.map((item, index) => (
+                        eduwork?.map((item, index) => (
                             <div key={index} className="eduwork__experience">
                                 <div className="eduwork__experience-title">
                                     <h2 className='eduwork__experience-title-name'><img src={item.eduworkicon} alt="" className='eduwork__experience-title-logo'/> {item.eduworktitle}</h2>

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import i18next from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 import { LuGithub } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa6";
@@ -9,6 +11,15 @@ import '../styles/header.css';
 
 function Header({scrollUpRef}) {
   const [burgerClick, setBurgerClick] = useState(false);
+  const [isRU, setIsRU] = useState(localStorage.getItem("lang") === "ru");
+
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const language = isRU ? "ru" : "en";
+    i18next.changeLanguage(language);
+    localStorage.setItem("lang", language);
+  }, [isRU]);
 
   return (
     <>
@@ -20,9 +31,19 @@ function Header({scrollUpRef}) {
                     <p className="header__logo-text">Curriculum Vitae</p>
                 </Link>
                 <div className="header__navlink">
-                    <li><Link to="/"className="header__navlink-text">Home</Link></li>
-                    <li><Link to="/about-me"className="header__navlink-text">About Me</Link></li>
+                    <li><Link to="/"className="header__navlink-text">{t('home')}</Link></li>
+                    <li><Link to="/about-me"className="header__navlink-text">{t('aboutme')}</Link></li>
+                    <div className="lang" onClick={() => { setIsRU(!isRU); }}
+                >
+                    <div className="toggle switch-toggles">
+                    <p className="lang-text">RU</p>
+                    <p className="lang-text">EN</p>
+                    <div className="circle toggle-circle"
+                         style={{ transform: isRU ? "translateX(1px)" : "translateX(40px)" }}></div>
+                    </div>
                 </div>
+                </div>
+                
                 <div className="header__cta">
                     <nav className={burgerClick ? "header__cta-burger-menu show-menu" : "header__cta-burger-menu"}>
                         <div className="burger__logo">

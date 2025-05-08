@@ -36,20 +36,22 @@ import authorprofile2 from '../icons/profilepic.png';
 import edulogo from '../icons/books.svg';
 import worklogo from '../icons/image969.svg';
 
-export const projects = [
+export const projects = (t) => 
+{
+  return [
     {
       bannerTitle : "Brand Landing",
       bannerTags : ["HTML/CSS(SCSS)", "JavaScript"],
-      bannerText : "A clean and responsive brand landing page built with pure HTML, CSS, and JavaScript. This project demonstrates a simple yet elegant design suitable for showcasing a product, service, or brand.",
+      bannerText : t('bannerText1'),
       bannerImage1 : bannerimage1,
       bannerImage2 : bannerimage2,
       projectSlug : "brand-landing",
       bannerImage3 : bannerimage3,
       bannerImage4 : bannerimage4,
-      projectSummaryText : "Optimized for all screen sizes, including desktops, tablets, and mobile devices. Includes JavaScript-powered interactions such as a swiper, accordeon and modal functions. Focus on clean and modern UI/UX design principles. Tested and functional on major browsers.",
+      projectSummaryText : t('projectSummaryText1'),
       projectSummaryTags :  ["Swiper", "Landing Adoption", "JavaScript"],
       projectSummaryItemObj : [ 
-        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/landing"},
+        {scope : "Github", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/landing"},
        ],
        teamMembers : [
         {photo : teammemberphoto1,
@@ -59,19 +61,19 @@ export const projects = [
       ]
     },
     {
-      bannerTitle : "The Blog",
+      bannerTitle : t('bannerTitle'),
       bannerTags : ["React", "NodeJS", "Redux"],
-      bannerText : "Blog site with authorization, creating/deleting posts, comments, likes, dislikes, and replies.",
+      bannerText : t('bannerText2'),
       bannerImage1 : bannerimage7,
       bannerImage2 : bannerimage6,
       projectSlug : "the-blog",
       bannerImage3 : bannerimage5,
       bannerImage4 : bannerimage8,
-      projectSummaryText : "Welcome to Blog Website, a modern, full-stack blogging platform built with JavaScript, React, MongoDB, Redux, and HTML/CSS. This platform allows users to create, edit, and delete posts, comment on posts, like posts, and even reply to comments. Whether you're a blogger or a reader, this platform has something for everyone!",
+      projectSummaryText : t('projectSummaryText1'),
       projectSummaryTags :  ["React", "MongoDB", "JavaScript", "NodeJS"],
       projectSummaryItemObj : [ 
-        {scope : "Website", name : "Visit website", link : "https://blog-4wsh.onrender.com"},
-        {scope : "GitHub", name : "Visit GitHub", link : "https://github.com/abdymaleeq925/blog"},
+        {scope : t('scopeName'), name : t('scopeLink'), link : "https://blog-4wsh.onrender.com"},
+        {scope : "GitHub", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/blog"},
        ],
        teamMembers : [
         {photo : servicesimage3,
@@ -87,17 +89,17 @@ export const projects = [
     {
       bannerTitle : "Cryptotnt",
       bannerTags : ["React", "REST API", "ant-d"],
-      bannerText : "This project is a cryptocurrency-focused webpage that provides up-to-date information on top cryptocurrencies, the latest crypto news, and cryptocurrency price trends.",
+      bannerText : t('bannerText3'),
       bannerImage1 : bannerimage10,
       bannerImage2 : bannerimage9,
       projectSlug : "crypto",
       bannerImage3 : bannerimage11,
       bannerImage4 : bannerimage12,
-      projectSummaryText : "This project is a cryptocurrency-focused webpage that provides up-to-date information on top cryptocurrencies, the latest crypto news, and cryptocurrency price trends. The data for news and cryptocurrency prices is fetched via a REST API using Express. The webpage also includes a news search function and a price chart with period selection.",
+      projectSummaryText : t('projectSummaryText3'),
       projectSummaryTags :  ["Rest Api", "React", "ant-d"],
       projectSummaryItemObj : [ 
-        {scope : "Website", name : "Visit website", link: "https://crypto-react-pi.vercel.app"},
-        {scope : "GitHub", name : "Visit GitHub", link : "https://github.com/abdymaleeq925/crypto-react"}
+        {scope : t('scopeName'), name : t('scopeLink'), link: "https://cryptnt.vercel.app"},
+        {scope : "GitHub", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/crypto-react"}
        ],
       teamMembers : [
         {photo : servicesimage3,
@@ -112,18 +114,16 @@ export const projects = [
     {
       bannerTitle : "Binterest",
       bannerTags : ["React", "Sanity"],
-      bannerText : "Album website full of pictures with Google authorization.",
+      bannerText : t('bannerText4'),
       bannerImage1 : bannerimage14,
-      bannerImage2 : bannerimage16,
+      bannerImage2 : bannerimage15,
       projectSlug : "binterest",
       bannerImage3 : bannerimage13,
-      bannerImage4 : bannerimage15,
-      projectSummaryText : "Album website full of pictures with Google authorization. You can save and download pictures. Seperated by categories.",
+      bannerImage4 : bannerimage16,
+      projectSummaryText : t('projectSummaryText4'),
       projectSummaryTags :  ["React", "Sanity", "HTML/CSS(SCSS)"],
       projectSummaryItemObj : [ 
-        {scope : "Duration", name : "4 weeks"},
-        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/binterest"},
-        {scope : "Tools", name : "React, JavaScript"}
+        {scope : "GitHub", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/binterest"},
        ],
       teamMembers : [
         {photo : servicesimage3,
@@ -135,20 +135,18 @@ export const projects = [
       ]
     },
     {
-      bannerTitle : "TechnoShop",
+      bannerTitle : "E-Shop",
       bannerTags : ["React", "Sanity"],
-      bannerText : "PC device shop with cart and backend.",
+      bannerText : t('bannerText5'),
       bannerImage1 : bannerimage18,
       bannerImage2 : bannerimage17,
       projectSlug : "eshop",
       bannerImage3 : bannerimage19,
       bannerImage4 : bannerimage20,
-      projectSummaryText : "Shop with adding/deleting products and payment",
+      projectSummaryText : t('projectSummaryText5'),
       projectSummaryTags :  ["React", "Sanity", "HTML/CSS(SCSS)"],
       projectSummaryItemObj : [ 
-        {scope : "Duration", name : "3 weeks"},
-        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/eshop"},
-        {scope : "Tools", name : "React, JavaScript"}
+        {scope : "GitHub", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/eshop"},
        ],
       teamMembers : [
         {photo : servicesimage3,
@@ -162,18 +160,16 @@ export const projects = [
     {
       bannerTitle : "TelegramBots",
       bannerTags : ["JavaScript", "REST API"],
-      bannerText : "Pair of telegram bots that can work on currency and qr-code",
+      bannerText : t('bannerText6'),
       bannerImage1 : bannerimage22,
       bannerImage2 : bannerimage21,
       projectSlug : "telegrambots",
       bannerImage3 : bannerimage21,
       bannerImage4 : bannerimage23,
-      projectSummaryText : "Telegram bots with AI that takes information from outsource and exchange your money.",
+      projectSummaryText : t('projectSummaryText6'),
       projectSummaryTags :  ["JavaScript", "REST API"],
       projectSummaryItemObj : [ 
-        {scope : "Duration", name : "2 days"},
-        {scope : "Website", name : "Visit website", link : "https://github.com/abdymaleeq925/currency_bot"},
-        {scope : "Tools", name : "REST API, JavaScript"}
+        {scope : "GitHub", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/currency_bot"},
        ],
       teamMembers : [
         {photo : servicesimage4,
@@ -182,31 +178,32 @@ export const projects = [
           name : "JavaScript"},
       ]
     }
-]
+  ]
+}
 
-export const services = [
+export const services = (t) => [
   {
     icon: servicesimage1,
     title : "Javascript",
-    text : "Javascript native, combining with other frameworks",
+    text : t('serviceText1'),
     fieldText : ["REST API", "React"]
   },
   {
     icon: servicesimage2,
     title : "Node JS",
-    text : "Connecting backend from Sanity, MongooDB.",
+    text : t('serviceText2'),
     fieldText : ["Sanity, MongoDB", "Javascript"]
   },
   {
     icon: servicesimage3,
     title : "React",
-    text : "Constructing whole page by components and provided with each other.",
+    text : t('serviceText3'),
     fieldText : ["Javascript", "HTML/CSS(SCSS)"]
   },
   {
     icon: teammemberphoto3,
     title : "Redux",
-    text : "Redux is a small library with a simple, limited API designed to be a predictable container for application state.",
+    text : t('serviceText4'),
     fieldText : ["React", "JavaScript"]
   },
   {
@@ -217,75 +214,56 @@ export const services = [
   }
 ]
 
-export const testimonials = [
+export const testimonials = (t) => [
   {
     authorProfile : authorprofile1,
-    authorName : "Rano Khassanova",
-    authorPosition : "Curator at ITC Bootcamp",
-    text : "I teached Malik during his Bootcamp program and I am delighted with his results. He has excellent communication skills and uses robust workflows that allowed me to teach and work with him efficiently."
+    authorName : t('testimonialName1'),
+    authorPosition : t('testimonialPosition1'),
+    text : t('tesitmonialText1'),
   },
   {
     authorProfile : authorprofile2,
-    authorName : "Adilet Zhanysbay",
-    authorPosition : "Mentor at Dara Solutions",
-    text : "I was glad to had him as an intern in our company and all I can say about him is that he showed outstanding performance during the internship program. We would like to offer him position but he wanted to conribute his efforts in Istanbul."
+    authorName : t('testimonialName2'),
+    authorPosition : t('testimonialPosition2'),
+    text : t('tesitmonialText2'),
   }
 ]
 
-export const eduwork = {
-  eduwork : [
+export const eduwork = (t) => [
     {
       eduworkicon : worklogo,
-      eduworktitle : "Work Experience",
+      eduworktitle : t('xp'),
       eduworklist : [
         {
-          period : "July 2024 to Nov 2024",
+          period : t('period2'),
           place : "Dara Solutions",
           degree : "Frontend Developer",
-          info : "Supporting, maintaining, adding features and fixing bugs according to business analytics comments."
+          info : t('info1')
         },
         {
-          period : "2022 to 2024",
-          place : "Turan Industrial",
-          degree : "Translator, Shift boss",
-          info : "Supervising mining operations, organizing worker pools and accounting for mining equipment, ensuring operational safety and efficient workflow."
+          period : t('period2'),
+          place : "Mining",
+          degree : t('degree2'),
+          info : t('info2')
         },
-        {
-          period : "2020 to 2022",
-          place : "AAEngineering Group",
-          degree : "HSE Engineer",
-          info : "Developing, installing, maintaining, configuring and upgrading OHS systems, assessing and reducing risks involved in the working systems, monitoring the performance of the OHS systems and implementing modifications"
-        }
       ]
     },
     {
       eduworkicon : edulogo,
-      eduworktitle : "Education",
+      eduworktitle : t('edu'),
       eduworklist : [
         {
-          period : "Feb to Jun, 2024",
-          place : "ITC BootCamp, Almaty",
-          degree : "JavaScript Fullstack Program",
-          info : "Program inculdes client and server software development using MERN bundle, mastering HTML/CSS on SASS/SCSS and Telegram Bot development."
+          period : t('period3'),
+          place : "ITC BootCamp",
+          degree : t('degree3'),
+          info : t('info3')
         },
         {
-          period : "2012 to 2019",
-          place : "Istanbul Technical University",
-          degree : "Mining Engineering",
-          info : "Surface and underground mining that includes whole process starting with mining and ending with mineral processing."
-        },
-        {
-          period : "2007 to 2012",
-          place : "Ch. Aytmatov's Bishkek Kyrgyz Turkish High School",
-          degree : "General",
-          info : "Includes high-school program in English."
+          period : t('period4'),
+          place : t('place2'),
+          degree : t('degree4'),
+          info : t('info4')
         }
       ]
     }
-  ]
-}
-
-export const featledge = {
-  features : ["Hard and patient worker", "Punctual", "Team worker"],
-  knowledge : ["JavaScript", "Python, Django(elementary level)", "React", "NodeJS", "HTML/CSS", "Telegram BOT"]
-}
+]

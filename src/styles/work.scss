@@ -58,6 +58,7 @@
                 @include text($font-family: Mulish, $line-height: 100%, $color: #525665);
             }
             &-btn {
+                text-align: center;
                 padding: 19px 38px;
                 width: 260px;
                 border-radius: 10px;

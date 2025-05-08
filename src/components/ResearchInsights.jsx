@@ -6,16 +6,18 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import '../styles/researchInsights.css';
+import { useTranslation } from 'react-i18next';
 
 const ResearchInsights = ({ projects }) => {
     const {slug} = useParams();
+    const { t } = useTranslation();
   return (
     <div>
       <section className="research">
             <div className="container">
                 <div className="research__wrapper">
                     <div className="research__heading">
-                        <h2 className="research__heading-title">Other Projects</h2>
+                        <h2 className="research__heading-title">{t('otherProjects')}</h2>
                     </div> 
                     <Swiper 
                         className='swipe_wrap'

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import vector from '../icons/Vector.svg';
 import '../styles/work.css';
+import { useTranslation } from 'react-i18next';
 
 
 const Work = ({ projects, scrollDownRef }) => {
@@ -11,6 +12,7 @@ const Work = ({ projects, scrollDownRef }) => {
   const getRandomColor = () => {
       return colorClass[Math.floor(Math.random() * colorClass.length)];
   }
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -32,7 +34,7 @@ const Work = ({ projects, scrollDownRef }) => {
                               }
                             </div> 
                             <p className="work__project-info-text">{project.bannerText}</p>
-                            <Link to={`/projects/${project.projectSlug}`} className="work__project-info-btn">Read Case Study <img className="btn-arrow-icon" alt="icon"
+                            <Link to={`/projects/${project.projectSlug}`} className="work__project-info-btn">{t('readCase')} <img className="btn-arrow-icon" alt="icon"
                                     src={vector} /></Link>
                         </div>
                         <div className="work__project-illustration">

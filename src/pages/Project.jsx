@@ -3,12 +3,14 @@ import { useParams } from 'react-router-dom';
 
 import { projects } from '../data/utils';
 import { Banner, ProjectSummary, ResearchInsights, TeamMembers } from '../components';
+import { useTranslation } from 'react-i18next';
 
 
 const Project = () => {
 
   const {slug} = useParams();
-  const [project] = projects?.filter(item => item.projectSlug === slug);
+  const { t } = useTranslation();
+  const [project] = projects(t).filter(item => item.projectSlug === slug);
 
   return (
     <div>
@@ -27,7 +29,7 @@ const Project = () => {
       members = {project.teamMembers}
       />
       <ResearchInsights 
-      projects = { projects }
+      projects = { projects(t) }
       />
     </div>
     

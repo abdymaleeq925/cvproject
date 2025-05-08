@@ -156,6 +156,47 @@
         font-size: 25px;
         font-weight: bold;
     }
+    .lang {
+        text-align: end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .toggle {
+        position: relative;
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        width: 80px;
+        height: 36px;
+        padding: 6px 12px;
+        font-size: 16px ;
+        color: black;
+        background-color: white;
+        cursor: pointer;
+        border-radius: full;
+    }
+    .circle {
+        position: absolute;
+        background-color: black;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        top: 5px;
+        left: 10px;
+    }
+    .lang-text {
+        height: 24px;
+        width: 16px;
+        font-family: Mulish;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 25.1px;
+    }
+    .toggle-circle {
+        content: "";
+        transition: transform 0.3s ease-in-out;
+    }
 }
 
 @media screen and (max-width: 1024px) {

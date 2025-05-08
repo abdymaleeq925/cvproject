@@ -1,15 +1,17 @@
 import React from 'react';
 
 import '../styles/team-members.css';
+import { useTranslation } from 'react-i18next';
 
 const TeamMembers = ({members}) => {
+    const { t } = useTranslation();
   return (
     <div>
         {members && (
             <section className="team">
             <div className="container">
                 <div className="team__wrapper">
-                    <h2 className="team__title">Tools</h2>
+                    <h2 className="team__title">{t('tools')}</h2>
                     <div className="team__members">
                         {
                             members?.map((member,index) => (

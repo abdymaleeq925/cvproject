@@ -12,6 +12,7 @@ import image1186 from '../icons/image1186.png';
 import image307 from '../icons/image307.png';
 import icon1 from '../icons/Icon1.svg';
 import '../styles/footer.css';
+import { useTranslation } from 'react-i18next';
 
 const Footer = forwardRef(({scrollUpRef}, ref) => {
   const scrollUp = (e) => {
@@ -20,6 +21,7 @@ const Footer = forwardRef(({scrollUpRef}, ref) => {
   };
   
   const link = useLocation();
+  const { t } = useTranslation();
   return (
     <>
       <footer className={link.pathname === '/' ? "footer light" : "footer"}>
@@ -37,7 +39,7 @@ const Footer = forwardRef(({scrollUpRef}, ref) => {
                   <img className="arrowup" src={link.pathname === '/' ? arrowupblack : arrowup} alt="arrowup"/>
                 </button>
                 <div className="footer__top-text">
-                  <span>Work<img className='monitor' src={image1186} alt="icon" />Get In Touch<img src={image307} alt="icon"/>Available for Work<img className='monitor' src={image1186} alt="icon"/></span>
+                  <span>{t('work')}<img className='monitor' src={image1186} alt="icon" />{t('getintouch')}<img src={image307} alt="icon"/>{t('available')}<img className='monitor' src={image1186} alt="icon"/></span>
                 </div>
               </div>
           </div>
@@ -52,8 +54,8 @@ const Footer = forwardRef(({scrollUpRef}, ref) => {
                   </ul>
                 </div>
                 <div className="footer__bottom-email-cta">
-                  <p className="footer__bottom-email-cta-text"> Interested in working together? Drop me a line</p>
-                  <button className="footer__bottom-email-cta-emailbtn" onClick={() =>  navigator.clipboard.writeText('abdymalikbatrykulov@gmail.com')}><img src={icon1} alt="" /> Copy Email</button>
+                  <p className="footer__bottom-email-cta-text">{t('dropaline')}</p>
+                  <button className="footer__bottom-email-cta-emailbtn" onClick={() =>  navigator.clipboard.writeText('abdymalikbatrykulov@gmail.com')}><img src={icon1} alt="" />{t('copyemail')}</button>
                 </div>
               </div>
             </div>

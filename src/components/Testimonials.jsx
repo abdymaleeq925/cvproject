@@ -1,16 +1,18 @@
 import React from 'react';
+import {useTranslation} from 'react-i18next';
 
 import sign from '../icons/commentsign.png';
 import '../styles/testimonials.css';
 
 const Testimonials = ({recommendations}) => {
+    const { t } = useTranslation();
   return (
     <div>
       <section className="testimonials">
         <div className="container">
             <div className="testimonials__wrapper">
                 <div className="testimonials__heading">
-                    <p className="testimonials__heading-title">What People Are Saying About My Work</p>
+                    <p className="testimonials__heading-title">{t('testimonialTitle')}</p>
                 </div>
                 <div className="testimonials__list">
                     {

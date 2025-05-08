@@ -7,12 +7,14 @@ import leftarrow from '../icons/case_vector.svg';
 import arrowdown from '../icons/arrowdown.svg';
 
 import '../styles/banner.css';
+import { useTranslation } from 'react-i18next';
 
 const Banner = forwardRef(({ title, text, boldText, buttonScroll, backtohome, bannerImage, bannerImage2, scrollDownRef }, ref) => {
   const scrollDown = (e) => {
     e.preventDefault();
     scrollDownRef.current.scrollIntoView({behavior: "smooth"});
   };
+  const { t } = useTranslation();
   return (
     <div>
       <section className="banner">
@@ -20,7 +22,7 @@ const Banner = forwardRef(({ title, text, boldText, buttonScroll, backtohome, ba
             <div className="banner__wrapper">
               <div className="banner__top">
                 {
-                  backtohome && <Link className="banner__btn" to="/"><img src={leftarrow} alt="vector"/> Back To Home</Link>
+                  backtohome && <Link className="banner__btn" to="/"><img src={leftarrow} alt="vector"/>{t('back')}</Link>
                 }
                 <div className="banner__top-info">
                     <p className="banner__top-info-name">{title} <img src={hornsigns} alt="sign"/></p>
