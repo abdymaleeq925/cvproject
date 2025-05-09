@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-@mixin text($font-family: Fraunces, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textgray)) {
+@mixin text($font-family: Montserrat, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textgray)) {
     font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weight;
@@ -188,6 +188,7 @@ img { max-width: 100%; }
 
 @media screen and (max-width: 480px) {
     .titles {
+        margin: 30px 0;
         &__wrapper { gap: 10px; }
         &__leftline, &__rightline { height: 20px; }
         &__name {
@@ -199,7 +200,6 @@ img { max-width: 100%; }
 
 @media screen and (max-width: 374px) {
     .titles {
-        margin: 40px 0;
         &__wrapper { gap: 8px; }
         &__name-text { font-size: 11px; letter-spacing: 2px; }
     }

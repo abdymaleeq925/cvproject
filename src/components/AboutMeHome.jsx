@@ -22,9 +22,7 @@ const AboutMeHome = ({text, image}) => {
                   <div className="about-me-home__picture">
                     <img src={image} alt="profile" className="about-me-home__img"/>
                   </div>
-                  <div className="about-me-home__resume">
-                      <a href={localStorage.getItem("lang") === "ru" ? MyCVru : MyCVen} download={localStorage.getItem("lang") === "ru" ? 'AbdymalikBatyrkulov_CV_ru.pdf' : 'AbdymalikBatyrkulov_CV_en.pdf'} className="img about-me-home__btn"><img src={button} alt="button-resume"/></a>
-                  </div>
+                  <a href={localStorage.getItem("lang") === "ru" ? MyCVru : MyCVen} download={localStorage.getItem("lang") === "ru" ? 'AbdymalikBatyrkulov_CV_ru.pdf' : 'AbdymalikBatyrkulov_CV_en.pdf'} className="img about-me-home__btn"><img src={button} alt="button-resume"/></a>
               </div>
           </div>
       </section>

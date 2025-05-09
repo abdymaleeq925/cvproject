@@ -42,7 +42,7 @@
             flex-direction: column;
             gap: 25px;
             &-title {
-                @include text($font-family: Fraunces, $font-size: 40px, $font-weight: 600, $line-height: 110%);
+                @include text($font-family: Montserrat, $font-size: 40px, $font-weight: 600, $line-height: 110%);
             }
             &-taglist {
                 display: flex;
@@ -184,8 +184,8 @@
         &__project {
             margin-bottom: 100px;
             padding: 60px;
-            &-pattern-1 { top: -60%; left: -25%; }
-            &-pattern-2 { right: -150%; }
+            &-pattern-1 { top: -55%; left: -20%; }
+            &-pattern-2 { right: -105%; }
             &-illustration-img1 { top: -1%; left: -14%;}
             &-illustration-img2 { top: 27%; }
             &-info {
@@ -200,7 +200,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .work {
         &__project {
             padding: 40px;
@@ -222,7 +222,7 @@
     .work {
         &__project {
             margin-bottom: 50px;
-            padding: 40px;
+            padding: 25px;
             &-info {
                 &-title { font-size: 20px; }
                 &-tag { font-size: 11px; padding: 11px; }

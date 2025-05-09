@@ -1,4 +1,4 @@
-@mixin text($font-family: Fraunces, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textgray)) {
+@mixin text($font-family: Montserrat, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textgray)) {
     font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weight;
@@ -26,7 +26,7 @@
     &__wrapper {
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
     }
     &__text {
@@ -47,17 +47,17 @@
         position: absolute;
         z-index: 1;
         bottom: -16%;
-        right: 12%;
+        right: 5%;
         border: none;
         background-color: transparent;
     }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
     .about-me-home {
         padding-bottom: 140px;
         &__text { font-size: 16px; }
-        &__btn { width: 150px; right: 3%; }
+        &__btn { width: 150px; }
     }
 }
 
@@ -71,8 +71,6 @@
         &__text { font-size: 16px; }
         &__btn {
             width: 115px;
-            bottom: -17%;
-            right: 14%;
         }
     }
 }

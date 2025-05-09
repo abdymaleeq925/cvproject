@@ -1,4 +1,4 @@
-@mixin text($font-family: Fraunces, $font-size: 25px, $font-weight: 500, $line-height: 128.5%, $color: var(--textblue)) {
+@mixin text($font-family: Montserrat, $font-size: 25px, $font-weight: 500, $line-height: 128.5%, $color: var(--textblue)) {
     font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weight;
@@ -45,7 +45,7 @@
 }
 
 .footer {
-    margin-top: 120px;
+    margin-top: 60px;
     position: relative;
     background: #2A2C32;;
     overflow: hidden;
@@ -173,6 +173,7 @@
         &-socials {
             display: flex;
             gap: 40px;
+            text-align: center;
         }
         &-cta {
             list-style: none;
@@ -267,7 +268,7 @@
 
 @media screen and (max-width: 767px) {
     .footer {
-        margin-top: 100px;
+        margin-top: 40px;
         &::before { top: 40%; }
         .rot { width: 110px; }
         .arrowup { width: 16px; top: 29px; left: 37px; }
@@ -280,7 +281,7 @@
             &__wrapper {
                 padding: 40px 0;
                 gap: 20px;
-                flex-wrap: wrap;
+                flex-direction: column;
             }
             &-cta li a, &-email-cta-text {
                 font-size: 18px;
@@ -294,12 +295,9 @@
         &__bottom-email-cta-text {
             font-size: 20px;
         }
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .footer {
-        margin-top: 80px;
+        &__bottom-cta {
+            column-count: 3;
+        }
     }
 }
 

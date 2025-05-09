@@ -1,4 +1,4 @@
-@mixin text($font-family: Fraunces, $font-size: 21px, $font-weight: 600, $line-height: 110%, $color: var(--textblue)) {
+@mixin text($font-family: Montserrat, $font-size: 21px, $font-weight: 600, $line-height: 110%, $color: var(--textblue)) {
     font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weight;
@@ -92,6 +92,9 @@
         &__wrapper {
             padding: 45px;
         }
+        &__profilepic {
+            width: 35%;
+        }
         &__content {
             width: 60%;
             &-info {       
@@ -127,13 +130,18 @@
     }
 }
 
-@media screen and (max-width: 559px) {
+@media screen and (max-width: 560px) {
     .about-me-banner {
+        &__wrapper {
+            padding: 20px;
+        }
         &__content {
             gap: 36px;
+            max-width: 90%;
             &-info-title { font-size: 32px; img { width: 24px; } }
             &-btns {
                 gap: 23px;
+                justify-content: center;
                 .btn-black {
                     padding: 13px 19px;
                 }
@@ -147,12 +155,13 @@
 
 @media screen and (max-width: 480px) {
     .about-me-banner {
+        margin-top: 30px;
         &__wrapper {
             padding: 30px;
             gap: 25px;
         }
         &__profilepic {
-            width: 60%;
+            width: 55%;
         }
         &__content {
             gap: 26px;

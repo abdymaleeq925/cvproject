@@ -235,7 +235,7 @@ export const eduwork = (t) => [
       eduworktitle : t('xp'),
       eduworklist : [
         {
-          period : t('period2'),
+          period : t('period1'),
           place : "Dara Solutions",
           degree : "Frontend Developer",
           info : t('info1')

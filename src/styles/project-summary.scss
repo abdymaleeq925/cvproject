@@ -14,7 +14,7 @@
     }
     &__info {
         width: 70%;
-        &-title { @include text ($font-family: Fraunces, $font-size: 30px); }
+        &-title { @include text ($font-family: Montserrat, $font-size: 30px); }
         &-text {
             @include text ($line-height: 128.5%, $color: #525665);
             margin-top: 19px;
@@ -39,7 +39,7 @@
         gap: 23px;
         width: 50%;
         &-title {
-            @include text ($font-family: Fraunces, $font-size: 30px);
+            @include text ($font-family: Montserrat, $font-size: 30px);
         }
         &-content {
             
@@ -53,7 +53,7 @@
                 &:not(:last-child) {
                     margin-bottom: 24px;
                 }
-                &-heading { @include text ($font-family: Fraunces); }
+                &-heading { @include text ($font-family: Montserrat); }
                 &-name { @include text($line-height: 128.5%); margin-top: 5px;}
                 &-link { @include text($line-height: 128.5%); text-decoration: underline;}
             }
@@ -99,7 +99,7 @@
 
 @media screen and (max-width: 559px) {
     .project-summary {
-        margin-top: 70px;
+        margin-top: 55px;
     }
 }
 

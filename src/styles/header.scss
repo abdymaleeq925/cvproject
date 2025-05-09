@@ -1,4 +1,4 @@
-@mixin text($font-family: Fraunces, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textgray)) {
+@mixin text($font-family: Montserrat, $font-size: 20px, $font-weight: 500, $line-height: 128.5%, $color: var(--textgray)) {
     font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weight;
@@ -35,6 +35,7 @@
     }
     &__navlink {
         display: flex;
+        align-items: center;
         gap: 50px;
         &-text {
             @include text($font-family: Mulish, $font-size: 20px, $font-weight: 600, $line-height: 25.1px, $color: var(--textblackish));
@@ -64,7 +65,7 @@
             padding-top: 24px;
             padding-left: 25px;
             padding-bottom: 30px;
-            width: 100%;
+            width: 85%;
             height: 100vh;
             position: fixed;
             background-color: #fff;
@@ -74,7 +75,7 @@
             box-shadow: 5px 0px 10px 0px #aaa;
             opacity: .95;
             &.show-menu {
-                z-index: 2;
+                z-index: 3;
                 top: 0;
                 right: -45%;
             }
@@ -88,7 +89,7 @@
                 }
                 a {
                     font-size: 20px;
-                    font-family: Fraunces;
+                    font-family: Montserrat;
                     color: #242F65;
                     text-decoration: none;  
                 }
@@ -115,7 +116,7 @@
             position: absolute;
             top: 34px;
             right: 30px;
-            z-index: 2;
+            z-index: 3;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -205,12 +206,12 @@
         &__logo {
             &-text { font-size: 26px; }
         }
-        &__navlink-text { font-size: 17px; }
+        &__navlink-text, .lang-text { font-size: 17px; }
         .logo { font-size: 20px; }
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .header {
         &__navlink {
             display: none;
@@ -221,7 +222,7 @@
     }
 }
 
-@media screen and (max-width: 559px) {
+@media screen and (max-width: 560px) {
     .header {
         &__logo {
             &-text { font-size: 22px; }
@@ -282,7 +283,7 @@
             height: 15px;
             width: 18.5px;
             &-menu {
-                padding-top: 8px;
+                padding-top: 24px;
                 gap: 10px;
                 &-links {
                     li {
@@ -302,6 +303,14 @@
             gap: 5px;
             &-text { font-size: 16px; }
             .logo { width: 16px; }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) { 
+    .header {
+        &__logo {
+            gap: 15px;
         }
     }
 }

@@ -37,7 +37,7 @@
                 }
             }
             &-heading-title {
-                @include text($font-family: Fraunces, $font-size: 30px);
+                @include text($font-family: Montserrat, $font-size: 30px);
             }
             &-text {
                 @include text($color: #525665);

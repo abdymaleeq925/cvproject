@@ -1,4 +1,4 @@
-@mixin text($font-family: Fraunces, $font-size: 18px, $font-weight: 600, $line-height: 110%, $color: var(--textblue)) {
+@mixin text($font-family: Montserrat, $font-size: 18px, $font-weight: 600, $line-height: 110%, $color: var(--textblue)) {
     font-family: $font-family;
     font-size: $font-size;
     font-weight: $font-weight;
@@ -47,9 +47,6 @@
 @media screen and (max-width: 1024px) {
     .team {
         margin-top: 90px;
-        &__wrapper {
-            flex-direction: column;
-        }
         &__title { font-size: 26px; }
         &__members-person {
             &-img { width: 70px; }
@@ -61,6 +58,10 @@
 
 @media screen and (max-width: 559px) {
     .team {
+        margin-top: 60px;
+        &__wrapper {
+            flex-direction: column;
+        }
         &__members {
             justify-content: space-around;
         }
