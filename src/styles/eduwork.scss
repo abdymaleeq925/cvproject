@@ -65,6 +65,14 @@
                         @include text($font-family: Mulish, $font-weight:300, $color: #525665);
                         font-style: italic;
                     }
+
+                    .link:hover{
+                        scale: 110%;
+                        border-radius: 12px;
+                        padding: 5px;
+                        background-color: var(--textblue);
+                        color: #fff;
+                    }
                 }
                 
             }

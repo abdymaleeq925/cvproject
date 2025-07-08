@@ -1,7 +1,7 @@
-import bannerimage1 from '../img/brand_landing_mobile.png';
-import bannerimage2 from '../img/brand_landing_layout.png';
-import bannerimage3 from '../img/brand_landing_layout_2.png';
-import bannerimage4 from '../img/brand_landing_burger-menu.png';
+import bannerimage1 from '../img/movease_layout.png';
+import bannerimage2 from '../img/movease_modal.png';
+import bannerimage3 from '../img/movease_layout_2.png';
+import bannerimage4 from '../img/movease_main.png';
 import bannerimage5 from '../img/blog_posts.png';
 import bannerimage6 from '../img/blog_layout.png';
 import bannerimage7 from '../img/blog_profile.png';
@@ -18,9 +18,10 @@ import bannerimage17 from '../img/eshop_layout.png';
 import bannerimage18 from '../img/eshop_mobile.png';
 import bannerimage19 from '../img/eshop_product_detail.png';
 import bannerimage20 from '../img/eshop_cart.png';
-import bannerimage21 from '../img/currency_bot_layout.png';
-import bannerimage22 from '../img/currency_bot_mobile.png';
-import bannerimage23 from '../img/qr_bot_layout.png';
+import bannerimage21 from '../img/drive_layout.png';
+import bannerimage22 from '../img/drive_layout_2.png';
+import bannerimage23 from '../img/drive_mobile.png';
+import bannerimage24 from '../img/drive_ipad.png';
 
 import teammemberphoto1 from '../icons/html5-svgrepo-com.svg';
 import teammemberphoto2 from '../icons/mongodb-svgrepo-com.svg';
@@ -31,6 +32,12 @@ import servicesimage2 from '../icons/nodejs-svgrepo-com.svg';
 import servicesimage3 from '../icons/react-16-svgrepo-com.svg';
 import servicesimage4 from '../icons/api-svgrepo-com.svg';
 import servicesimage5 from '../icons/ant-design.svg'
+import servicesimage6 from '../icons/appwrite_logo.svg';
+import servicesimage7 from '../icons/tailwind-svgrepo-com.svg';
+import servicesimage8 from '../icons/vite-svgrepo-com.svg';
+import servicesimage9 from '../icons/next-js-svgrepo-com.svg';
+import servicesimage10 from '../icons/typescript-official-svgrepo-com.svg';
+import servicesimage11 from '../icons/shadcn-ui-seeklogo.svg';
 import authorprofile1 from '../img/Image3.png';
 import authorprofile2 from '../icons/profilepic.png';
 import edulogo from '../icons/books.svg';
@@ -40,24 +47,27 @@ export const projects = (t) =>
 {
   return [
     {
-      bannerTitle : "Brand Landing",
-      bannerTags : ["HTML/CSS(SCSS)", "JavaScript"],
+      bannerTitle : "Movease",
+      bannerTags : ["React + Vite", "Tailwind CSS", "Appwrite"],
       bannerText : t('bannerText1'),
       bannerImage1 : bannerimage1,
       bannerImage2 : bannerimage2,
-      projectSlug : "brand-landing",
+      projectSlug : "movease",
       bannerImage3 : bannerimage3,
       bannerImage4 : bannerimage4,
       projectSummaryText : t('projectSummaryText1'),
-      projectSummaryTags :  ["Swiper", "Landing Adoption", "JavaScript"],
+      projectSummaryTags :  ["React + Vite", "Tailwind CSS", "Appwrite"],
       projectSummaryItemObj : [ 
-        {scope : "Github", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/landing"},
+        {scope : "Github", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/movease"},
+        {scope : "Vercel", name : t('scopeLink'), link : "https://movease-eight.vercel.app"},
        ],
        teamMembers : [
-        {photo : teammemberphoto1,
-        name : "HTML/CSS(SCSS)"},
-        {photo : servicesimage1,
-        name : "JavaScript"}
+        {photo : servicesimage8,
+        name : "React + Vite"},
+        {photo : servicesimage7,
+        name : "Tailwind CSS"},
+        {photo : servicesimage6,
+          name : "Appwrite"}
       ]
     },
     {
@@ -158,24 +168,29 @@ export const projects = (t) =>
       ]
     },
     {
-      bannerTitle : "TelegramBots",
-      bannerTags : ["JavaScript", "REST API"],
+      bannerTitle : "Dr.Ive - Storage management website",
+      bannerTags : ["Next.js", "Typescript", "Appwrite", "ShadCN"],
       bannerText : t('bannerText6'),
       bannerImage1 : bannerimage22,
       bannerImage2 : bannerimage21,
-      projectSlug : "telegrambots",
-      bannerImage3 : bannerimage21,
+      projectSlug : "drive",
+      bannerImage3 : bannerimage24,
       bannerImage4 : bannerimage23,
       projectSummaryText : t('projectSummaryText6'),
-      projectSummaryTags :  ["JavaScript", "REST API"],
+      projectSummaryTags :  ["Next.js", "TypeScript", "Appwrite", "ShadCN"],
       projectSummaryItemObj : [ 
-        {scope : "GitHub", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/currency_bot"},
+        {scope : "GitHub", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/drive"},
+        {scope : "Vercel", name : t('scopeLink'), link : "https://drive-wheat.vercel.app"},
        ],
       teamMembers : [
-        {photo : servicesimage4,
-        name : "REST API"},
-        {photo : servicesimage1,
-          name : "JavaScript"},
+        {photo : servicesimage9,
+        name : "Next.js"},
+        {photo : servicesimage10,
+          name : "TypeScript"},
+        {photo : servicesimage6,
+          name : "Appwrite"},
+        {photo : servicesimage11,
+          name : "ShadCN"},
       ]
     }
   ]
@@ -190,7 +205,7 @@ export const services = (t) => [
   },
   {
     icon: servicesimage2,
-    title : "Node JS",
+    title : "Node.js",
     text : t('serviceText2'),
     fieldText : ["Sanity, MongoDB", "Javascript"]
   },
@@ -209,9 +224,15 @@ export const services = (t) => [
   {
     icon: servicesimage4,
     title : "API",
-    text : "REST APIs are an industry-standard way for web services to send and receive data.",
+    text : t('serviceText5'),
     fieldText : ["JavaScript"]
-  }
+  },
+  {
+    icon: servicesimage9,
+    title : "Next.js",
+    text : t('serviceText6'),
+    fieldText : ["JavaScript"]
+  },
 ]
 
 export const testimonials = (t) => [
@@ -256,7 +277,7 @@ export const eduwork = (t) => [
           period : t('period3'),
           place : "ITC BootCamp",
           degree : t('degree3'),
-          info : t('info3')
+          info : t('info3'),
         },
         {
           period : t('period4'),

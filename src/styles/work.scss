@@ -46,13 +46,17 @@
             }
             &-taglist {
                 display: flex;
+                text-align: center;
                 gap: 15px;
             }
             &-tag {
                 @include text($font-size: 18px, $font-weight: 600);
+                display: flex;
+                align-items: center;
                 border-radius: 10px;
                 border: none;
                 padding: 11px 20px;
+                height: 100%;
             }
             &-text {
                 @include text($font-family: Mulish, $line-height: 100%, $color: #525665);
@@ -76,14 +80,14 @@
                 position: absolute;
                 z-index: 1;
                 top: -17%;
-                left: -21%;
+                left: 0%;
             }
             &-img2 {
                 position: absolute;
                 z-index: 2;
                 max-width: 117%;
-                top: 31%;
-                left: 3%;
+                top: 32%;
+                left: 9%;
                 border-radius: 10px;
             }
         }

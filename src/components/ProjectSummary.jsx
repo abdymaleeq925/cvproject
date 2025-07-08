@@ -13,7 +13,7 @@ const ProjectSummary = ({ summaryText, summaryTags, itemObj }) => {
           <div className="project-summary__wrapper">
             <div className="project-summary__info">
               <h2 className="project-summary__info-title">{t('projectSummary')}</h2>
-              <p className="project-summary__info-text">{summaryText}</p>
+              <p className="project-summary__info-text">{summaryText.split('\n').map((line, i) => <p key={i}>{line}</p>)}</p>
               <div className="project-summary__info-tags">
                 {summaryTags?.map((tag, index) => (
                   <div className="project-summary__info-tags-item" key={index}>
@@ -38,6 +38,7 @@ const ProjectSummary = ({ summaryText, summaryTags, itemObj }) => {
                     <Link
                       to={item.link}
                       className="project-summary__details-content-item-link"
+                      target="_blank"
                     >
                       {item.name}
                     </Link>
