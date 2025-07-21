@@ -22,6 +22,10 @@ import bannerimage21 from '../img/drive_layout.png';
 import bannerimage22 from '../img/drive_layout_2.png';
 import bannerimage23 from '../img/drive_mobile.png';
 import bannerimage24 from '../img/drive_ipad.png';
+import bannerimage25 from '../img/fortouristic_main.png';
+import bannerimage26 from '../img/fortouristic_detail.png';
+import bannerimage27 from '../img/fortouristic_layout.png';
+import bannerimage28 from '../img/fortouristic_detail2.png';
 
 import teammemberphoto1 from '../icons/html5-svgrepo-com.svg';
 import teammemberphoto2 from '../icons/mongodb-svgrepo-com.svg';
@@ -38,6 +42,7 @@ import servicesimage8 from '../icons/vite-svgrepo-com.svg';
 import servicesimage9 from '../icons/next-js-svgrepo-com.svg';
 import servicesimage10 from '../icons/typescript-official-svgrepo-com.svg';
 import servicesimage11 from '../icons/shadcn-ui-seeklogo.svg';
+import servicesimage12 from '../icons/react-router-svgrepo-com.svg';
 import authorprofile1 from '../img/Image3.png';
 import authorprofile2 from '../icons/profilepic.png';
 import edulogo from '../icons/books.svg';
@@ -191,6 +196,32 @@ export const projects = (t) =>
           name : "Appwrite"},
         {photo : servicesimage11,
           name : "ShadCN"},
+      ]
+    },
+    {
+      bannerTitle : "Fortouristic - Plan your travel with us",
+      bannerTags : ["React + Vite", "React Router v7", "Appwrite", "TailwindCSS"],
+      bannerText : t('bannerText7'),
+      bannerImage1 : bannerimage26,
+      bannerImage2 : bannerimage25,
+      projectSlug : "fortouristic",
+      bannerImage3 : bannerimage27,
+      bannerImage4 : bannerimage28,
+      projectSummaryText : t('projectSummaryText7'),
+      projectSummaryTags :  ["React + Vite", "React Router v7", "Appwrite", "TailwindCSS"],
+      projectSummaryItemObj : [ 
+        {scope : "GitHub", name : t('scopeLink2'), link : "https://github.com/abdymaleeq925/fortouristic"},
+        {scope : "Vercel", name : t('scopeLink'), link : "https://fortouristic.vercel.app"},
+       ],
+      teamMembers : [
+        {photo : servicesimage8,
+        name : "React + Vite"},
+        {photo : servicesimage12,
+          name : "React Router v7"},
+        {photo : servicesimage6,
+          name : "Appwrite"},
+        {photo : servicesimage7,
+          name : "TailwindCSS"},
       ]
     }
   ]
